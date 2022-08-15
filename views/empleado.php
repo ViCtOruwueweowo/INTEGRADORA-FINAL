@@ -23,7 +23,7 @@
               </li>
             </ul>
             <form class="d-flex">
-            <a class="nav-link active" aria-current="page" href="empleado/proovedores.php">Proveedor</a>
+            <a class="nav-link active" aria-current="page" href="empleado/proveedor.php">Proveedor</a>
                 <a class="nav-link active" aria-current="page" href="empleado/productos.php">Productos</a>
                 <a class="nav-link active" aria-current="page" href="empleado/modificar.php">Modificar</a>
                 <a class="nav-link active" aria-current="page" href="empleado/pedido.php">Pedido</a>

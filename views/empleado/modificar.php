@@ -12,7 +12,7 @@
         <!--Menu-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.php" style="color: white;">The Box Club</a>
+          <a class="navbar-brand" href="../../index.php" style="color: white;">The Box Club</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -23,9 +23,10 @@
               </li>
             </ul>
             <form class="d-flex">
-                <a class="nav-link active" aria-current="page" href="administrador/productos.php">Productos</a>
-                <a class="nav-link active" aria-current="page" href="administrador/modificar.php">Modificar</a>
-                <a class="nav-link active" aria-current="page" href="administrador/registrar.php">Registrar</a>
+            <a class="nav-link active" aria-current="page" href="proveedor.php">Proveedor</a>
+                <a class="nav-link active" aria-current="page" href="productos.php">Productos</a>
+                <a class="nav-link active" aria-current="page" href="modificar.php">Modificar</a>
+                <a class="nav-link active" aria-current="page" href="pedido.php">Pedido</a>
             </form>
           </div>
         </div>
