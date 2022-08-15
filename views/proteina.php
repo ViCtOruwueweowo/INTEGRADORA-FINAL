@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once("../src/estilos/carrito.php");
+require_once("clase.php");
 
 $usar_db = new DBControl();
 
@@ -18,8 +18,7 @@ switch($_GET["accion"])
 			'vai_cod'		=>$codproducto[0]["cod"], 
 			'txtcantidad'	=>$_POST["txtcantidad"], 
 			'vai_pre'		=>$codproducto[0]["PRECIO_UNITARIO"], 
-			'vai_img'		=>$codproducto[0]["img"],
-			'vai_descuento' =>$codproducto[0]["NOMBRE"]
+			'vai_img'		=>$codproducto[0]["img"]
 			));
 			
 			if(!empty($_SESSION["items_carrito"])) 
@@ -76,20 +75,19 @@ switch($_GET["accion"])
 }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<meta charset="UTF-8">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/estilo1.css">
-    <link rel="stylesheet" href="../js/bootstrap.js">
-    <script src="carrito.php"></script>
-    <title>Todos Los Productos</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/estilo1.css">
+<link rel="stylesheet" href="../js/bootstrap.js">
+<title>Equipo</title>
 </head>
 <body>
-    <!--Menu-->
+	<!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.php" style="color: white;">The Box Club</a>
@@ -131,12 +129,10 @@ switch($_GET["accion"])
       </nav>
       <!---->
 
-      <div>
-      <div>
 <div><h2>Productos</h2></div>
 <div class="contenedor_general">
 	<?php
-	$productos_array = $usar_db->vaiquery("SELECT * FROM productos WHERE CATEGORIA='2'");
+	$productos_array = $usar_db->vaiquery("SELECT * FROM productos WHERE categoria='2'");
 	if (!empty($productos_array)) 
 	{ 
 		foreach($productos_array as $i=>$k)
@@ -160,5 +156,5 @@ switch($_GET["accion"])
 	?>
 </div>
 
-    </body>
+</body>
 </html>

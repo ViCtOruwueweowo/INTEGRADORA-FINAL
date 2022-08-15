@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once("../src/estilos/carrito.php");
+require_once("clase.php");
 
 $usar_db = new DBControl();
 
@@ -18,8 +18,7 @@ switch($_GET["accion"])
 			'vai_cod'		=>$codproducto[0]["cod"], 
 			'txtcantidad'	=>$_POST["txtcantidad"], 
 			'vai_pre'		=>$codproducto[0]["PRECIO_UNITARIO"], 
-			'vai_img'		=>$codproducto[0]["img"],
-			'vai_descuento' =>$codproducto[0]["NOMBRE"]
+			'vai_img'		=>$codproducto[0]["img"]
 			));
 			
 			if(!empty($_SESSION["items_carrito"])) 
@@ -76,20 +75,19 @@ switch($_GET["accion"])
 }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<meta charset="UTF-8">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/estilo1.css">
-    <link rel="stylesheet" href="../js/bootstrap.js">
-    <script src="carrito.php"></script>
-    <title>Todos Los Productos</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/estilo1.css">
+<link rel="stylesheet" href="../js/bootstrap.js">
+<title>Equipo</title>
 </head>
 <body>
-    <!--Menu-->
+	<!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.php" style="color: white;">The Box Club</a>
@@ -109,7 +107,7 @@ switch($_GET["accion"])
                     <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
                     <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
                   </svg>Ofertas</a>
-                  <a class="nav-link active" aria-current="page" href="index.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                  <a class="nav-link active" aria-current="page" href="equipo.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
   <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
 </svg>Equipo</a>
                   <a class="nav-link active" aria-current="page" href="proteina.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
@@ -131,12 +129,10 @@ switch($_GET["accion"])
       </nav>
       <!---->
 
-      <div>
-      <div>
 <div><h2>Productos</h2></div>
 <div class="contenedor_general">
 	<?php
-	$productos_array = $usar_db->vaiquery("SELECT * FROM productos ORDER BY CATEGORIA ASC");
+	$productos_array = $usar_db->vaiquery("SELECT * FROM productos ");
 	if (!empty($productos_array)) 
 	{ 
 		foreach($productos_array as $i=>$k)
@@ -160,5 +156,5 @@ switch($_GET["accion"])
 	?>
 </div>
 
-    </body>
+</body>
 </html>
