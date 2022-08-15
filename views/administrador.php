@@ -23,9 +23,9 @@
               </li>
             </ul>
             <form class="d-flex">
-                <a class="nav-link active" aria-current="page" href="#">Productos</a>
-                <a class="nav-link active" aria-current="page" href="#">Modificar</a>
-                <a class="nav-link active" aria-current="page" href="#">Registrar</a>
+                <a class="nav-link active" aria-current="page" href="administrador/productos.php">Productos</a>
+                <a class="nav-link active" aria-current="page" href="administrador/modificar.php">Modificar</a>
+                <a class="nav-link active" aria-current="page" href="administrador/registrar.php">Registrar</a>
             </form>
           </div>
         </div>
