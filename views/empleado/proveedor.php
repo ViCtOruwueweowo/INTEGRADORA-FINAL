@@ -24,9 +24,10 @@
             </ul>
             <form class="d-flex">
             <a class="nav-link active" aria-current="page" href="proveedor.php">Proveedor</a>
-                <a class="nav-link active" aria-current="page" href="productos.php">Productos</a>
-                <a class="nav-link active" aria-current="page" href="modificar.php">Modificar</a>
                 <a class="nav-link active" aria-current="page" href="pedido.php">Pedido</a>
+                <a class="nav-link active" aria-current="page" href="bebidas.php">Bebidas</a>
+                <a class="nav-link active" aria-current="page" href="suplementos.php">Suplementos</a>
+                <a class="nav-link active" aria-current="page" href="equipo.php">Equipo</a>
             </form>
           </div>
         </div>
