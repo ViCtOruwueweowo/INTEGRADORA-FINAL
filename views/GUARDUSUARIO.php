@@ -22,7 +22,7 @@
         $usuario->ejecutar($cadena);
 
         echo "<div class='alert alert=success'>USUARIO REGISTRADO</div>";
-        header("refresh:40 loginapp.php");
+        header("refresh:4 loginapp.php");
         ?>
     </div>
 </body>
