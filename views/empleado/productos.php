@@ -32,5 +32,81 @@
         </div>
     </nav>
       <!---->
+</div>
+<div class="container">
+        <h1 align="center">Bebidas</h1>
+
+<form action="" method="post">
+
+<?php
+use MyApp\Query\Select;
+require("../../vendor/autoload.php");
+
+$query = new Select();
+
+$cadena = "SELECT PROVEEDOR.ID_PRO, PROVEEDOR.NOMBRE FROM PROVEEDOR";
+$reg = $query->seleccionar($cadena);
+
+echo "<div class='mb-3>'
+<label class='control-label'>
+PROVEEDOR
+</label>
+<select name='proveedor' class='form-select'>";
+foreach($reg as $value)
+{
+    echo "<option value='".$value->ID_PRO."'>".$value->NOMBRE."</option>";
+}
+echo "</select>
+</div>";
+
+?>
+<br>
+<button type="submit" class="btn btn-lg btn-primary">Ver</button>
+</form>
+<br><br>
+        
+        <?php
+
+if($_POST)
+{
+    extract($_POST);
+    $consulta = new SELECT();
+
+        $query = new select();
+
+        $cadena= "SELECT PRODUCTOS.NOMBRE, PRODUCTOS.PRECIO_UNITARIO, PRODUCTOS.DESCUENTO, PRODUCTOS.EXISTENCIA, PROVEEDOR.NOMBRE AS PROV, PRODUCTOS.DESCRIPCION FROM PRODUCTOS INNER JOIN CATEGORIAS ON CATEGORIAS.ID_CAT=PRODUCTOS.CATEGORIA INNER JOIN PROVEEDOR ON PROVEEDOR.ID_PRO=PRODUCTOS.PROVWHERE CATEGORIAS.NOMBRE='Bebidas' and PROVEEDOR.ID_PRO='$proveedor'";
+        
+       
+        $tabla = $query->seleccionar($cadena);
+
+        echo "<table class='table table-hover'>
+        <thead class='table-dark'>
+        <tr>
+        <th>PRODUCTO</th><th>PRECIO UNITARIO</th><th>DESCUENTO</th><th>EXISTENCIA</th><th>PROVEEDOR</th><th>DESCRIPCION</th>
+        </tr>
+        </thead>
+        <body>";
+
+        foreach($tabla as $registro)
+        {
+            echo "<tr>";
+            
+            echo "<td> $registro->NOMBRE</td>";
+            echo "<td> $registro->PRECIO_UNITARIO </td>";
+            echo "<td> $registro->DESCUENTO </td>";
+            echo "<td> $registro->EXISTENCIA </td>";
+            echo "<td> $registro->PROV </td>";
+            echo "<td> $registro->DESCRIPCION </td>";
+
+            echo "</tr>";
+        } 
+
+        echo "</body>";
+        "</table>";
+
+        
+ }
+        ?>
+    </div>    
 </body>
 </html>
