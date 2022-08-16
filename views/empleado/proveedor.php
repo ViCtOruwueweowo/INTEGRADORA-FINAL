@@ -73,13 +73,13 @@ echo "</select>
         $consulta = new SELECT();
 
 
-        $cadena= "SELECT PROVEEDOR.NOMBRE, PROVEEDOR.DIRECCION, PROVEEDOR.CORREO, PROVEEDOR.TELEFONO, PROVEEDOR.CIUDAD FROM PROVEEDOR WHERE PROVEEDOR.ID_PRO=$proveedor";
+        $cadena= "SELECT PROVEEDOR.NOMBRE, PROVEEDOR.DIRECCION, PROVEEDOR.CORREO, PROVEEDOR.TELEFONO, PROVEEDOR.CIUDAD FROM PROVEEDOR WHERE CATEGORIA='3'";
         
        
         $tabla = $query->seleccionar($cadena);
 
         echo "<table class='table table-hover'>
-        <thead class='table-dark'>
+        <thead class='table-success'>
         <tr>
         <th>PROVEEDOR</th><th>DIRECCION</th><th>CORREO</th><th>TELEFONO</th><th>CIUDAD</th>
         </tr>

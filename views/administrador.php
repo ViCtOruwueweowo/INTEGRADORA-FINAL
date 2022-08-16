@@ -8,7 +8,7 @@
     <script src="../js/bootstrap.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body >
     <!--Menu-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">

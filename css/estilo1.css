@@ -11,13 +11,13 @@ table
 
 th 
 {
-    background: steelblue;
+    background: rgba(164, 18, 169, 0.67);
     height: 40px;
     font-weight: lighter;
-    text-shadow: 0 1px 0 #38678f;
+    text-shadow: 0 1px 0 rgba(164, 18, 169, 0.67);
     color: white;
-    border: 1px solid #38678f;
-    box-shadow: inset 0px 1px 2px #568ebd;
+    border: 1px solid rgba(164, 18, 169, 0.67);
+    box-shadow: inset 0px 1px 2px rgba(220, 58, 225, 0.67);
     transition: all 0.2s;
 	font-size: 18px;
 
@@ -54,11 +54,11 @@ hr
 
 .contenedor_productos {
 	float: left;
-	background: white;
+	background: rgb(255, 255, 255);
 	position: relative;
 	margin:1%;
-	border: 10px solid black;
-	border-radius:5px;
+	border: 7.5px solid rgb(0, 0, 0);
+	border-radius:10px;
 	text-align:center;
 	padding:20px 40px;
 	margin-bottom:4%;
@@ -90,3 +90,4 @@ input[type="text"]
 	margin-right:10px;
 	margin-top:5px;
 }
+
