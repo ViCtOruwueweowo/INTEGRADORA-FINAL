@@ -1,9 +1,10 @@
 <?php
-session_start();
+session_start(); 
 
-require_once("clase.php");
+		use MyApp\Query\Select;
+        require("../vendor/autoload.php");
 
-$usar_db = new DBControl();
+		$query = new select();
 
 if(!empty($_GET["accion"])) 
 {
@@ -12,7 +13,7 @@ switch($_GET["accion"])
 	case "agregar":
 		if(!empty($_POST["txtcantidad"])) 
 		{
-			$codproducto = $usar_db->vaiQuery("SELECT * FROM productos WHERE cod='" . $_GET["cod"] . "'");
+			$codproducto = $dbname->ejecutar("SELECT * FROM productos WHERE cod='" . $_GET["cod"] . "'");
 			$items_array = array($codproducto[0]["cod"]=>array(
 			'vai_nom'		=>$codproducto[0]["NOMBRE"], 
 			'vai_cod'		=>$codproducto[0]["cod"], 
@@ -132,7 +133,10 @@ switch($_GET["accion"])
 <div><h2>Productos</h2></div>
 <div class="contenedor_general">
 	<?php
-	$productos_array = $usar_db->vaiquery("SELECT * FROM productos ");
+	
+	$eje = new Select();
+	$qry="SELECT * FROM PRODUCTOS WHERE CATEGORIA='3'";
+	$productos_array = $eje->seleccionar($qry);
 	if (!empty($productos_array)) 
 	{ 
 		foreach($productos_array as $i=>$k)

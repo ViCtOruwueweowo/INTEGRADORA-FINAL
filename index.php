@@ -26,6 +26,17 @@
 </head>
 <body  style="background-image:url(https://www.xtrafondos.com/descargar.php?id=4052&resolucion=3840x2160)">
     <!--Menu-->
+    <?php
+  session_start();
+  if(isset($_SESSION["CORREO"]))
+  {
+    echo "<h5 align='right'>Usuario: ".$_SESSION["CORREO"]."</h5>";
+    echo "<h6 align='right'>
+    <a href='views/CERRARsesion.php'>[Cerrar sesión]</a>
+    </h6>";
+  }
+
+  ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="color: white;">The Box Club</a>
