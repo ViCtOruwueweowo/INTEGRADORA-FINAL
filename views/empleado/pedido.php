@@ -32,5 +32,75 @@
         </div>
     </nav>
       <!---->
+      <div class="container">
+      <h1 align="center">orden compra</h1>
+      <form action="" method="post">
+
+      <?php
+use MyApp\Query\Select;
+require("../../vendor/autoload.php");
+
+$query = new Select();
+
+$cadena = "SELECT PROVEEDOR.ID_PRO, PROVEEDOR.NOMBRE FROM PROVEEDOR";
+$reg = $query->seleccionar($cadena);
+
+echo "<div class='mb-3>'
+<label class='control-label'>
+PROVEEDOR
+</label>
+<select name='proveedor' class='form-select'>";
+foreach($reg as $value)
+{
+    echo "<option value='".$value->ID_PRO."'>".$value->NOMBRE."</option>";
+}
+echo "</select>
+</div>";
+
+?>
+<br>
+<button type="submit" class="btn btn-lg btn-primary">Ver</button>
+</form>
+<br><br>
+
+
+        <?php
+
+        if($_POST)
+    {
+        extract($_POST);
+        $query = new select();
+
+        $cadena= "SELECT ORDEN_COMPRA.FECHA, USUARIO.NOMBRES, PROVEEDOR.NOMBRE FROM ORDEN_COMPRA INNER JOIN USUARIO ON USUARIO.ID_US=ORDEN_COMPRA.USUARIO INNER JOIN PROVEEDOR ON PROVEEDOR.ID_PRO=ORDEN_COMPRA.PROVEEDOR=''";
+        
+       
+        $tabla = $query->seleccionar($cadena);
+
+        echo "<table class='table table-hover'>
+        <thead class='table-warning'>
+        <tr>
+        <th>FECHA</th><th>USUARIO</th><th>PROVEEDOR</th>
+        </tr>
+        </thead>
+        <body>";
+
+        foreach($tabla as $registro)
+        {
+            echo "<tr>";
+            
+            echo "<td> $registro->FECHA </td>";
+            echo "<td> $registro->NOMBRES </td>";
+            echo "<td> $registro->NOMBRE </td>";
+    
+            echo "</tr>";
+        } 
+
+        echo "</body>";
+        "</table>";
+      }
+?>
+    </div>
+
+
 </body>
 </html>
