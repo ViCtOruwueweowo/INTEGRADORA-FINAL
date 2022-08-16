@@ -10,6 +10,8 @@ class Ejecuta
     {
         try
         {
+             
+            //asasas
             $cc = new Database("tbc","root","admin");
             $objetoPDO= $cc->getPDO();
             $resultado = $objetoPDO->query($qry);
