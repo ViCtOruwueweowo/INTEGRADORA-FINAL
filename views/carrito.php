@@ -18,7 +18,7 @@ switch($_GET["accion"])
 			'vai_cod'		=>$codproducto[0]["cod"], 
 			'txtcantidad'	=>$_POST["txtcantidad"], 
 			'vai_pre'		=>$codproducto[0]["PRECIO_UNITARIO"], 
-			'vai_img'		=>$codproducto[0]["img"]
+			'vai_img'		=>$codproducto[0]["IMAGEN"]
 			));
 			
 			if(!empty($_SESSION["items_carrito"])) 
@@ -86,7 +86,7 @@ switch($_GET["accion"])
 <title>Carrito</title>
 <link href="estilo.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background-image: linear-gradient(33deg,#7c0078, rgb(235, 227, 227));">
 	<!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">

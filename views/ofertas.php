@@ -18,7 +18,7 @@ switch($_GET["accion"])
 			'vai_cod'		=>$codproducto[0]["cod"], 
 			'txtcantidad'	=>$_POST["txtcantidad"], 
 			'vai_pre'		=>$codproducto[0]["PRECIO_UNITARIO"], 
-			'vai_img'		=>$codproducto[0]["img"]
+			'vai_img'		=>$codproducto[0]["IMAGEN"]
 			));
 			
 			if(!empty($_SESSION["items_carrito"])) 
@@ -141,7 +141,7 @@ switch($_GET["accion"])
 		<div class="contenedor_productos">
 			<form method="POST" action="index.php?accion=agregar&cod=
 			<?php echo $productos_array[$i]["cod"]; ?>">
-			<div><img src="<?php echo $productos_array[$i]["img"]; ?>"></div>
+			<div><img src="<?php echo $productos_array[$i]["IMAGEN"]; ?>"></div>
 			<div>
 			<div style="padding-top:20px;font-size:18px;"><?php echo $productos_array[$i]["NOMBRE"]; ?></div>
 			<div style="padding-top:10px;font-size:20px;"><?php echo "$".$productos_array[$i]["PRECIO_UNITARIO"]; ?></div>

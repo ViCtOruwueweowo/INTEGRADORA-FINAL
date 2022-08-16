@@ -32,11 +32,10 @@
         </div>
     </nav>
       <!---->
-</div>
-<div class="container">
-        <h1 align="center">Bebidas</h1>
 
-<form action="" method="post">
+    <div class="container">
+        <h1 align="center">Equipo deportivo</h1>
+        <form action="" method="post">
 
 <?php
 use MyApp\Query\Select;
@@ -54,7 +53,7 @@ PROVEEDOR
 <select name='proveedor' class='form-select'>";
 foreach($reg as $value)
 {
-    echo "<option value='".$value->ID_PRO."'>".$value->NOMBRE."</option>";
+echo "<option value='".$value->ID_PRO."'>".$value->NOMBRE."</option>";
 }
 echo "</select>
 </div>";
@@ -64,17 +63,18 @@ echo "</select>
 <button type="submit" class="btn btn-lg btn-primary">Ver</button>
 </form>
 <br><br>
-        
-        <?php
+
+<?php
 
 if($_POST)
 {
     extract($_POST);
     $consulta = new SELECT();
+     
 
         $query = new select();
 
-        $cadena= "SELECT PRODUCTOS.NOMBRE, PRODUCTOS.PRECIO_UNITARIO, PRODUCTOS.DESCUENTO, PRODUCTOS.EXISTENCIA, PROVEEDOR.NOMBRE AS PROV, PRODUCTOS.DESCRIPCION FROM PRODUCTOS INNER JOIN CATEGORIAS ON CATEGORIAS.ID_CAT=PRODUCTOS.CATEGORIA INNER JOIN PROVEEDOR ON PROVEEDOR.ID_PRO=PRODUCTOS.PROVWHERE CATEGORIAS.NOMBRE='Bebidas' and PROVEEDOR.ID_PRO='$proveedor'";
+        $cadena= "SELECT PRODUCTOS.NOMBRE, PRODUCTOS.PRECIO_UNITARIO, PRODUCTOS.DESCUENTO, PRODUCTOS.EXISTENCIA, PROVEEDOR.NOMBRE AS PROV, PRODUCTOS.DESCRIPCION, PRODUCTOS.IMAGEN FROM PRODUCTOS INNER JOIN CATEGORIAS ON CATEGORIAS.ID_CAT=PRODUCTOS.CATEGORIA INNER JOIN PROVEEDOR ON PROVEEDOR.ID_PRO=PRODUCTOS.PROV WHERE CATEGORIAS.NOMBRE='Equipo deportivo' and PROVEEDOR.ID_PRO='$proveedor'";
         
        
         $tabla = $query->seleccionar($cadena);
@@ -82,7 +82,7 @@ if($_POST)
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
-        <th>PRODUCTO</th><th>PRECIO UNITARIO</th><th>DESCUENTO</th><th>EXISTENCIA</th><th>PROVEEDOR</th><th>DESCRIPCION</th>
+        <th>PRODUCTO</th><th>PRECIO UNITARIO</th><th>DESCUENTO</th><th>EXISTENCIA</th><th>PROVEEDOR</th><th>DESCRIPCION</th><th>IMAGEN</th>
         </tr>
         </thead>
         <body>";
@@ -97,16 +97,15 @@ if($_POST)
             echo "<td> $registro->EXISTENCIA </td>";
             echo "<td> $registro->PROV </td>";
             echo "<td> $registro->DESCRIPCION </td>";
-
+            echo "<td> $registro->IMAGEN </td>";
             echo "</tr>";
         } 
 
         echo "</body>";
         "</table>";
 
-        
- }
-        ?>
-    </div>    
+    }
+    ?>
+    </div>
 </body>
 </html>
