@@ -97,17 +97,31 @@
       <!---->
 <br>
 
+<<<<<<< HEAD
 <!--Contenedor-->
 <div class="container" style="background-color: rgba(255, 255, 255, 0);">
+=======
+      <!--Contenedor-->
+   <!--Contenedor-->
+   <div class="container" style="background-color: rgba(255, 255, 255, 0);">
+>>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
 <!--Carrusel de imagenes-->
 <div style="padding-top: 15px;" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
+<<<<<<< HEAD
       <a href="#"><img style="cursor: pointer;" src="img_cliente/img.jpg" class="d-block w-100" width="1900" height="450"></a>
     </div>
     <!---->
     <div class="carousel-item">
       <a href=""><img src="img_cliente/img2.png" class="d-block w-100" width="1900" height="450"></a>
+=======
+      <a href="#"><img style="cursor: pointer;" src="../../img/img.jpg" class="d-block w-100" width="1900" height="450"></a>
+    </div>
+    <!---->
+    <div class="carousel-item">
+      <a href=""><img src="img/img2.png" class="d-block w-100" width="1900" height="450"></a>
+>>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
     </div>
     <!---->
     <div class="carousel-item">
@@ -209,15 +223,23 @@ echo"</div>";
       <h3>OFERTAS</h3>
           </div>
           <div class="face back">
+<<<<<<< HEAD
       <h3 style="color: orange;">¡¡DISFRUTA DE GRANDES OFERTAS!!</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
           <a href="../ofertas.php">Ir a Ofertas</a>
+=======
+      <h3 style="color: orange;">!!DISFRUTA DE GRANDES OFERTAS¡¡</h3>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
+      <div class="link">
+          <a href="views/ofertas.php">Ir a Ofertas</a>
+>>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
       </div>
           </div>
         </div></td>
         <td ><div class="card">
           <div class="face front">
+<<<<<<< HEAD
       <img src="img_cliente/inscripcion.jpg" alt="">
       <h3>INSCRIPCION</h3>
           </div>
@@ -226,6 +248,16 @@ echo"</div>";
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
           <a href="../inscripciongym.php">Ir a Inscripcion</a>
+=======
+      <img src="img/inscripcion.jpg" alt="">
+      <h3>INSCRIPCION</h3>
+          </div>
+          <div class="face back">
+      <h3 style="color: orange;">!!INSCRIBETE AHORA¡¡</h3>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
+      <div class="link">
+          <a href="views/inscripciongym.php">Ir a Inscripcion</a>
+>>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
       </div>
           </div>
           
@@ -236,10 +268,17 @@ echo"</div>";
       <h3>CONOCENOS</h3>
           </div>
           <div class="face back">
+<<<<<<< HEAD
       <h3 style="color: orange;">¡¡SOMOS GYM CLUB!!</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
           <a href="../nosotros.php">Ir a conocenos</a>
+=======
+      <h3 style="color: orange;">!!SOMOS GYM CLUB¡¡</h3>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
+      <div class="link">
+          <a href="views/nosotros.php">Ir a conocenos</a>
+>>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
       </div>
           </div>
           
