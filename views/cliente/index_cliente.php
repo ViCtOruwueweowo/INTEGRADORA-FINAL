@@ -29,16 +29,7 @@
 <body style="background-image:img_cliente/">
     <!--Menu-->
 
-    <?php
-  session_start();
-  if(isset($_SESSION["CORREO"]))
-  {
-    echo "<h5 align='right'>Usuario: ".$_SESSION["CORREO"]."</h5>";
-    echo "<h6 align='right'>
-    <a href='../CERRARsesion.php'>[Cerrar sesión]</a>
-    </h6>";
-  }
-  ?>
+   
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
@@ -52,7 +43,16 @@
               
             </ul>
             <form class="d-flex">
-          
+            <?php
+  session_start();
+  if(isset($_SESSION["CORREO"]))
+  {
+    echo "<h5 align='right'>Usuario: ".$_SESSION["CORREO"]."</h5>";
+    echo "<h6 align='right'>
+    <a href='../CERRARsesion.php'>[Cerrar sesión]</a>
+    </h6>";
+  }
+  ?>
             <a class="nav-link active d-flex" aria-current="page" href="../inscripciongym.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
   <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
   <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -96,32 +96,17 @@
       </nav>
       <!---->
 <br>
-
-<<<<<<< HEAD
 <!--Contenedor-->
 <div class="container" style="background-color: rgba(255, 255, 255, 0);">
-=======
-      <!--Contenedor-->
-   <!--Contenedor-->
-   <div class="container" style="background-color: rgba(255, 255, 255, 0);">
->>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
 <!--Carrusel de imagenes-->
 <div style="padding-top: 15px;" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-<<<<<<< HEAD
       <a href="#"><img style="cursor: pointer;" src="img_cliente/img.jpg" class="d-block w-100" width="1900" height="450"></a>
     </div>
     <!---->
     <div class="carousel-item">
       <a href=""><img src="img_cliente/img2.png" class="d-block w-100" width="1900" height="450"></a>
-=======
-      <a href="#"><img style="cursor: pointer;" src="../../img/img.jpg" class="d-block w-100" width="1900" height="450"></a>
-    </div>
-    <!---->
-    <div class="carousel-item">
-      <a href=""><img src="img/img2.png" class="d-block w-100" width="1900" height="450"></a>
->>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
     </div>
     <!---->
     <div class="carousel-item">
@@ -223,33 +208,16 @@ echo"</div>";
       <h3>OFERTAS</h3>
           </div>
           <div class="face back">
-<<<<<<< HEAD
-      <h3 style="color: orange;">¡¡DISFRUTA DE GRANDES OFERTAS!!</h3>
-      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
-      <div class="link">
-          <a href="../ofertas.php">Ir a Ofertas</a>
-=======
       <h3 style="color: orange;">!!DISFRUTA DE GRANDES OFERTAS¡¡</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
           <a href="views/ofertas.php">Ir a Ofertas</a>
->>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
       </div>
           </div>
         </div></td>
         <td ><div class="card">
           <div class="face front">
-<<<<<<< HEAD
       <img src="img_cliente/inscripcion.jpg" alt="">
-      <h3>INSCRIPCION</h3>
-          </div>
-          <div class="face back">
-      <h3 style="color: orange;">¡¡INSCRIBETE AHORA!!</h3>
-      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
-      <div class="link">
-          <a href="../inscripciongym.php">Ir a Inscripcion</a>
-=======
-      <img src="img/inscripcion.jpg" alt="">
       <h3>INSCRIPCION</h3>
           </div>
           <div class="face back">
@@ -257,7 +225,6 @@ echo"</div>";
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
           <a href="views/inscripciongym.php">Ir a Inscripcion</a>
->>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
       </div>
           </div>
           
@@ -268,17 +235,10 @@ echo"</div>";
       <h3>CONOCENOS</h3>
           </div>
           <div class="face back">
-<<<<<<< HEAD
-      <h3 style="color: orange;">¡¡SOMOS GYM CLUB!!</h3>
-      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
-      <div class="link">
-          <a href="../nosotros.php">Ir a conocenos</a>
-=======
       <h3 style="color: orange;">!!SOMOS GYM CLUB¡¡</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
           <a href="views/nosotros.php">Ir a conocenos</a>
->>>>>>> 3f95b5c62d529863d55dd7a679559f08559daf9a
       </div>
           </div>
           
@@ -286,5 +246,3 @@ echo"</div>";
       </div>
       <!--Fin Cards-->
     
-</body>
-</html>
