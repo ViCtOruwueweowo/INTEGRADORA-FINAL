@@ -74,7 +74,11 @@ echo "</select>
         $consulta = new SELECT();
 
 
+<<<<<<< HEAD
         $cadena= "SELECT PROVEEDOR.NOMBRE, PROVEEDOR.DIRECCION, PROVEEDOR.CORREO, PROVEEDOR.TELEFONO, PROVEEDOR.CIUDAD FROM PROVEEDOR WHERE proveedor.id_pro='$proveedor'";
+=======
+        $cadena= "SELECT PROVEEDOR.NOMBRE, PROVEEDOR.DIRECCION, PROVEEDOR.CORREO, PROVEEDOR.TELEFONO, PROVEEDOR.CIUDAD FROM PROVEEDOR WHERE PROVEEDOR.ID_PRO='$proveedor'";
+>>>>>>> a08574a762221966c2a9fb0b98cfe4bedb7b274b
         
        
         $tabla = $query->seleccionar($cadena);

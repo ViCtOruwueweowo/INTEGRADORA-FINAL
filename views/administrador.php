@@ -32,7 +32,11 @@
                 <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\empleados.php">Empleados</a>
                 <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\orden_compra-emp.php">Ordenes de compra</a>
                 <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\proveedores.php">Proveedores</a>
+<<<<<<< HEAD
         
+=======
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\inscripciones.php">Inscripciones</a>
+>>>>>>> a08574a762221966c2a9fb0b98cfe4bedb7b274b
                 <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\ventas.php">Ventas</a>
                 <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\compra_cliente.php">Compras clientes</a>
                 

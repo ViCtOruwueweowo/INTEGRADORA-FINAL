@@ -26,6 +26,7 @@
 </head>
 <body  style="background-image:url(https://www.xtrafondos.com/descargar.php?id=4052&resolucion=3840x2160)">
     <!--Menu-->
+
     <?php
   session_start();
   if(isset($_SESSION["CORREO"]))
@@ -35,8 +36,9 @@
     <a href='views/CERRARsesion.php'>[Cerrar sesión]</a>
     </h6>";
   }
-
   ?>
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="color: white;">The Box Club</a>
@@ -48,11 +50,11 @@
               
             </ul>
             <form class="d-flex">
-            <a class="nav-link active d-flex" aria-current="page" href="views/administrador.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
+            <a class="nav-link active d-flex" aria-current="page" href="views/administrador/index_admin.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
             <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
              <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
             </svg> Administrador</a>
-            <a class="nav-link active d-flex" aria-current="page" href="views/empleado.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+            <a class="nav-link active d-flex" aria-current="page" href="views/empleado/index_emp.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
             <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
             </svg>Empleado</a>
                 <a class="nav-link active d-flex" aria-current="page" href="views/ofertas.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
@@ -64,10 +66,22 @@
                 <a class="nav-link active" aria-current="page" href="http://localhost/APLICACIONES_WEB_3B/The%20box%20club/views/ofertas.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-handbag" viewBox="0 0 16 16">
                     <path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6h4z"/>
                   </svg> Productos</a>
-                <a class="nav-link active" aria-current="page" href="views/loginapp.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                  </svg> Iniciar Sesion</a>
+                  
+
+                  
+      <?php
+        
+        if(!isset($_SESSION["CORREO"]))
+        {
+          echo "<a class='nav-link active' aria-current='page' href='views/loginapp.php'><svg xmlns='http://www.w3.org/2000/svg' width='19' height='30' fill='currentColor' class='bi bi-person-circle' viewBox='0 0 16 16'>
+          <path d='M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z'/>
+          <path fill-rule='evenodd' d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z'/>
+        </svg>Iniciar sesión</a>
+          </li>";
+        }
+        ?>
+
+                  
                 <a class="nav-link active" aria-current="page" href="views/carrito.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
                     <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
                   </svg> Mi Carrito</a>
@@ -130,7 +144,7 @@
       <br>
       <input type="submit" value="Calcular" style="background-color:rgb(95, 95, 174) ;border: transparent;color: white;width: 150px; height: 35px;margin: 5px;">
 
-    </form>
+    </form> 
     <br>
     <h5 style="font-family:century gothic;color: white;text-align:center">¡No Te Vayas Aqui Esta Tu Resultado!</h5>
     <?php
@@ -227,7 +241,6 @@ echo"</div>";
         </div></td>
       </div>
       <!--Fin Cards-->
-
     
 </body>
 </html>
