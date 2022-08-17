@@ -90,7 +90,7 @@
 <br>
 
       <!--Contenedor-->
-<h1>ESTA ES LA VISTA DE ADMIN, SI LA VERIFICACIÓN JALA, DEBERÍA VER ESTO</h1>
+<h1>ESTA ES LA VISTA DE ADMIN, SI LA VERIFICACIÓN JALA, DEBERÍA VER ESTO jiji</h1>
       <!--Fin contenedor-->
 
 
