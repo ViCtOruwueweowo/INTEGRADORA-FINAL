@@ -9,6 +9,22 @@
     <script src="../js/bootstrap.js"></script>
     <title>Login App</title>
     <body>
+    <?php
+    session_start();
+    if (isset($_SESSION["usuario"]))
+    {
+        echo "<div class='alert 'alert-warning'>
+        <h2  style='color:white;'align='center'>usuario: ".$_SESSION["usuario"]."</h2>";
+        echo "<h3 align='center'>
+        <a href='CERRARsesion.php' align='right'>[Cerrar Sesion]</a>
+        </h3>
+        </div>";
+    }
+    else
+    {
+        header("Location:loginapp.php");
+    }
+    ?>
 <!--Menu-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
