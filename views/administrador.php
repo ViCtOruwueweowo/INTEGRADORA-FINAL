@@ -8,7 +8,7 @@
     <script src="../js/bootstrap.js"></script>
     <title>Document</title>
 </head>
-<body >
+<body>
     <!--Menu-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
@@ -23,9 +23,19 @@
               </li>
             </ul>
             <form class="d-flex">
-                <a class="nav-link active" aria-current="page" href="administrador/productos.php">Productos</a>
-                <a class="nav-link active" aria-current="page" href="administrador/modificar.php">Modificar</a>
-                <a class="nav-link active" aria-current="page" href="administrador/registrar.php">Registrar</a>
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\productos.php">Productos</a>
+                
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\index_reg.php">Registrar</a>
+                
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\empleado-prov.php">Empleado-proveedor</a>
+                
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\empleados.php">Empleados</a>
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\orden_compra-emp.php">Ordenes de compra</a>
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\proveedores.php">Proveedores</a>
+        
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\ventas.php">Ventas</a>
+                <a class="nav-link active" aria-current="page" href="..\imagen_prueba\administrador\compra_cliente.php">Compras clientes</a>
+                
             </form>
           </div>
         </div>

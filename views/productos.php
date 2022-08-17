@@ -135,7 +135,7 @@ switch($_GET["accion"])
 	<?php
 	
 	$eje = new Select();
-	$qry="SELECT * FROM PRODUCTOS WHERE CATEGORIA='3'";
+	$qry="SELECT * FROM PRODUCTOS ORDER BY CATEGORIA";
 	$productos_array = $eje->seleccionar($qry);
 	if (!empty($productos_array)) 
 	{ 

@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-            <!--Menu-->
+        <!--Menu-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
         <div class="container-fluid">
           <a class="navbar-brand" href="../../index.php" style="color: white;">The Box Club</a>
@@ -22,23 +22,16 @@
               
               </li>
             </ul>
-            <form class="d-flex">
-            <a class="nav-link active" aria-current="page" href="proveedor.php">Proveedor</a>
-                <a class="nav-link active" aria-current="page" href="pedido.php">Pedido</a>
-                <a class="nav-link active" aria-current="page" href="bebidas.php">Bebidas</a>
-                <a class="nav-link active" aria-current="page" href="suplementos.php">Suplementos</a>
-                <a class="nav-link active" aria-current="page" href="equipo.php">Equipo</a>
-            </form>
+            
           </div>
         </div>
     </nav>
       <!---->
       <div class="container">
-        <h1 align="center">PROVEEDORES</h1>
+      <h1 align="center">orden compra</h1>
+      <form action="" method="post">
 
-        <form action="" method="post">
-
-<?php
+      <?php
 use MyApp\Query\Select;
 require("../../vendor/autoload.php");
 
@@ -71,18 +64,14 @@ echo "</select>
         if($_POST)
     {
         extract($_POST);
-        $consulta = new SELECT();
-
-
-        $cadena= "SELECT PROVEEDOR.NOMBRE, PROVEEDOR.DIRECCION, PROVEEDOR.CORREO, PROVEEDOR.TELEFONO, PROVEEDOR.CIUDAD FROM PROVEEDOR WHERE proveedor.id_pro='$proveedor'";
-        
-       
+        $query = new select();
+        $cadena= "SELECT ORDEN_COMPRA.FECHA, USUARIO.NOMBRES, PROVEEDOR.NOMBRE FROM ORDEN_COMPRA INNER JOIN USUARIO ON USUARIO.ID_US=ORDEN_COMPRA.USUARIO INNER JOIN PROVEEDOR ON PROVEEDOR.ID_PRO=ORDEN_COMPRA.PROVEEDOR=''";
         $tabla = $query->seleccionar($cadena);
 
         echo "<table class='table table-hover'>
-        <thead class='table-success'>
+        <thead class='table-warning'>
         <tr>
-        <th>PROVEEDOR</th><th>DIRECCION</th><th>CORREO</th><th>TELEFONO</th><th>CIUDAD</th>
+        <th>FECHA</th><th>USUARIO</th><th>PROVEEDOR</th>
         </tr>
         </thead>
         <body>";
@@ -90,22 +79,20 @@ echo "</select>
         foreach($tabla as $registro)
         {
             echo "<tr>";
+            
+            echo "<td> $registro->FECHA </td>";
+            echo "<td> $registro->NOMBRES </td>";
             echo "<td> $registro->NOMBRE </td>";
-            echo "<td> $registro->DIRECCION </td>";
-            echo "<td> $registro->CORREO </td>";
-            echo "<td> $registro->TELEFONO </td>";
-            echo "<td> $registro->CIUDAD </td>";
 
             echo "</tr>";
         } 
 
         echo "</body>";
         "</table>";
-    }
-        ?>
-
+      }
+?>
     </div>
 
-    
+
 </body>
 </html>
