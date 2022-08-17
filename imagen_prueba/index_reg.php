@@ -35,9 +35,15 @@
                 <input type="text" REQUIRED name="descripcion"><br><br>
                 <label for="categoria">Categoria</label>
                 <select name="categoria">
+<<<<<<< HEAD
+                    <option value="1">Bebidas</option>
+                    <option value="2">Energizante</option>
+                    <option value="3">Equipo De Uso</option>
+=======
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+>>>>>>> a08574a762221966c2a9fb0b98cfe4bedb7b274b
                 </select>
                 <label for="proveedor">Proveedor</label>
                 <select name="proveedor">
