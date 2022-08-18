@@ -15,7 +15,7 @@
         $usuario = new Ejecuta();
         extract($_POST);
 
-        $cadena="INSERT INTO PROVEEDOR (NOMBRE,DETALLE) 
+        $cadena="INSERT INTO CATEGORIA (NOMBRE,DETALLE) 
         VALUES('$nombre','$detalle')";
 
         $usuario->ejecutar($cadena);
