@@ -198,6 +198,7 @@ echo"</div>";
       <h3 style="color: orange;">!!DISFRUTA DE GRANDES OFERTAS¡¡</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
+
           <a href="views/ofertas.php">Ir a Ofertas</a>
       </div>
           </div>
@@ -211,7 +212,7 @@ echo"</div>";
       <h3 style="color: orange;">!!INSCRIBETE AHORA¡¡</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
-          <a href="views/inscripciongym.php">Ir a Inscripcion</a>
+          <a href="../inscripciongym.php">Ir a Inscripcion</a>
       </div>
           </div>
           
