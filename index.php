@@ -168,6 +168,7 @@
     <br>
     <h5 style="font-family:century gothic;color: white;text-align:center">¡No Te Vayas Aqui Esta Tu Resultado!</h5>
     <?php
+<<<<<<< HEAD
 	if($_POST)
 	{	
 		$num1 = $_POST
@@ -179,6 +180,15 @@
 		echo "<div style=color:white>".$suma."<div>"; 
 	}
 ?>
+=======
+$altura= $_POST['Altura'];
+$peso= $_POST['Peso'];
+$imc = $peso/($altura^2);
+echo "<div style=color:white>TU IMC ES DE: $imc";
+echo"</div>";
+
+              ?>
+>>>>>>> 137c9f5b55b0fb05d01d123688b9f8befaf41e3c
     <br>
     <div class="container" style="background-color: transparent;border:transparent">
       <table >
@@ -244,7 +254,7 @@
       <h3 style="color: orange;">!!INSCRIBETE AHORA¡¡</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
-          <a href="views/inscripciongym.php">Ir a Inscripcion</a>
+          <a href="views/loginapp.php">Ir a Inscripcion</a>
       </div>
           </div>
           
