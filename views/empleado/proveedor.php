@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <script src="../../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/fondo.css">
+        <link rel="stylesheet" href="css/registro.css">
     <title>Document</title>
 </head>
 <body>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fondo.css">
+        <link rel="stylesheet" href="css/registro.css">
     <title>Document</title>
 </head>
 <body>
@@ -61,7 +63,7 @@ $reg = $query->seleccionar($cadena);
             echo "<tr>";
             echo "<td> $registro->NOMBRE</td>";
             echo "<td> $registro->DETALLE</td>";
-            echo "<td><input type='button' value='Modificar' href=''></td>";
+            echo "<td><a href='editarcategoria.php'><input type='button' value='Modificar' href=''></td>";
             echo "<td><a href='agregarcategoria.php'><input type='button' value='Registrar nueva categoria'></a>
             </td>";
             echo "</tr>";

@@ -13,7 +13,7 @@ use MyApp\Query\Select;
 require("../../vendor/autoload.php");
 
 $categoria = new Select();
-$consulta = "SELECT * FROM CATEGORIA where $idcat = ''";
+$consulta = "SELECT * FROM CATEGORIA where $ID__CAT = '$nombre'";
 ?>
         <h3>Registro de Categoria</h3>
         <hr>
