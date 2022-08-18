@@ -210,7 +210,7 @@
       <h3 style="color: orange;">!!SOMOS GYM CLUB¡¡</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
-          <a href="views/nosotros.php">Ir a conocenos</a>
+          <a href="../nosotros.php">Ir a conocenos</a>
       </div>
           </div>
           

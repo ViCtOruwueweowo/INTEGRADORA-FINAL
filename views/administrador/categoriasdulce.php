@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="../css/fondo.css">
     <link rel="stylesheet" href="../css/bootstrap.css.min">
         <link rel="stylesheet" href="css/registro.css">
     <title>Document</title>
@@ -26,7 +26,7 @@ $reg = $query->seleccionar($cadena);
 
         echo "<div class='mb-3>'
         <label class='control-label'>
-        fecha
+        CATEGORIA
         </label>
         <select name='nombre' class='form-select'>";
         foreach($reg as $value)

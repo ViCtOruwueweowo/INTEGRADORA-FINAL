@@ -31,7 +31,13 @@
       <!---->
 <br>
 <!-- -------------------------------------------------------------------------------------------------------- -->
-
+<?php
+session_start();
+  if(isset($_SESSION["CORREO"]))
+  {
+echo "<a class='nav-link active d-flex' href='../CERRARsesion.php'>Cerrar sesión</a>";
+  }
+  ?>
 
 <div class="container" id="contenedor" style="color:white">
     <div class="row">

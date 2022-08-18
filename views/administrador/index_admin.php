@@ -58,17 +58,7 @@
             <a class="nav-link active d-flex" aria-current="page" href="categoriasdulce.php">Categorias</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
-        <?php
-  session_start();
-  if(isset($_SESSION["CORREO"]))
-  {
-
- echo  
-            "<a class='nav-link active d-flex' href='../CERRARsesion.php'>Cerrar sesión</a>";
-  echo          "<a class='nav-link active d-flex'>".$_SESSION["CORREO"]."</a>";
-
-  }
-  ?>        
+   
 </div>
 </div>
 

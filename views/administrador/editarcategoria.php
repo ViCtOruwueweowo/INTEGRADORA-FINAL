@@ -23,7 +23,7 @@ foreach($cc as $edit){}
 ?>
         <h3>Registro de Categoria</h3>
         <hr>
-        <form action="modificar_categoria" method="post">
+        <form action="modificar_categoria.php" method="post">
             <fieldset>
                 <legend>Modioficar categoria</legend> 
                 <br>

@@ -39,32 +39,24 @@
 <h1 class="animate__animated animate__backInLeft">¡¡Inscríbete a nuestro gimnasio ahora!!</h1>
 <h5 class="animate__animated animate__backInLeft">Comencemos este viaje juntos</h5>
 
-<p>Telefono<input type="text" placeholder="Ingrese su telefono" name="telefono"></p>
+<p>Correo electrónico <input type="text" placeholder="Ingrese su correo" name="user"></p>
+
+<p>Teléfono<input type="text" placeholder="Ingrese su teléfono" name="telefono"></p>
 
 <label>Dia De Registro<input type="datetime" name="fecha" value="" placeholder="<?= $fecha?>"></p>
 
 <p>Metodo De Pago</p>
   <select name="metodo">
-      <option value="1">Credito</option>
-      <option value="2">Debito</option>
-      <option value="3">Playpal</option>
+      <option value="1" name="Credito">Credito</option>
+      <option value="2" name="Debito">Debito</option>
+      <option value="3" name="Paypal">Paypal</option>
   </select>
   
 
 <input type="submit" value="Registrarme Ahora">
 <br>
 <br>
- 
-<?php
-  session_start();
-  if(isset($_SESSION["CORREO"]))
-  {
-    echo "<h5 align='right'>Usuario: ".$_SESSION["CORREO"]."</h5>";
-    echo "<h6 align='right'>
-    <a href='../CERRARsesion.php'>[Cerrar sesión]</a>
-    </h6>";
-  }
-  ?>
+
 </form>  
 </body>
 </html>
