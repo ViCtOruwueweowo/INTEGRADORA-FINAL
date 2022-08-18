@@ -12,8 +12,14 @@
 use MyApp\Query\Select;
 require("../../vendor/autoload.php");
 
+$editar=$_GET['id'];
+
 $categoria = new Select();
-$consulta = "SELECT * FROM CATEGORIA where $ID__CAT = '$nombre'";
+$consulta = "SELECT * FROM CATEGORIAS where ID_CAT = $editar";
+
+
+$cc = $categoria->seleccionar($consulta);
+foreach($cc as $edit){}
 ?>
         <h3>Registro de Categoria</h3>
         <hr>
@@ -23,12 +29,14 @@ $consulta = "SELECT * FROM CATEGORIA where $ID__CAT = '$nombre'";
                 <br>
                 <input type="text" hidden>
                 <label for="Fecha">NOMBRE:</label>
-                <input type="text" name="nombre"  required placeholder=" "> <br><br>
+                <input type="text" name="nombre"  required placeholder="" value='<?php echo $edit->NOMBRE  ?>'> <br><br>
 
                 <label for="Fecha">DETALLE:</label>
-                <input type="text" name="detalle"  required placeholder=" "> <br><br>
+                <input type="text" name="detalle"  required placeholder="" value='<?php echo $edit->DETALLE ?>'> <br><br>
 
+                
                 <input class="boton" type="submit" value="Guardar" name="Guardar">
+                
         </form>
 </div>
 </body>

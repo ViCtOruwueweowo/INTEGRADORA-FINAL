@@ -17,7 +17,7 @@
                 extract($_POST);
 
                 $cadena = "UPDATE CATEGORIA SET NOMBRE='$nombre',DETALLE='$detalle' where id_cat=1";
-                $insert->seleccionar($cadena);   
+                $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>
                 CLIENTE REGISTRADO</div>";

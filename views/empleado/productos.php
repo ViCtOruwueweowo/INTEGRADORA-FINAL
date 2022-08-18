@@ -4,34 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/fondo.css">
-    <link rel="stylesheet" href="../css/bootstrap.css.min">
-        <link rel="stylesheet" href="css/registro.css">
     <title>Document</title>
 </head>
 <body>
-<h1 align="center">CATEGORIAS</h1>
+<div class="container">
+        <h1 align="center">PRODUCTOS</h1>  
+        <?php
 
-<form action="#" method="post">
-<?php
+        use MyApp\Query\select;
+        require("../../vendor/autoload.php");
 
-use MyApp\Query\select;
-require("../../vendor/autoload.php");
+        $query = new select();
 
-$query = new select();
+        $cadena= "SELECT PRECIO_UNITARIO FROM PRODUCTOS";
 
-$cadena= "SELECT ID_CAT, NOMBRE, DETALLE FROM categorias";
-
-$reg = $query->seleccionar($cadena);
+        $reg = $query->seleccionar($cadena);
 
         echo "<div class='mb-3>'
         <label class='control-label'>
-        fecha
+        Precio:
         </label>
-        <select name='nombre' class='form-select'>";
+        <select name='precio' class='form-select'>";
         foreach($reg as $value)
         {
-            echo "<option value='".$value->ID_CAT."'>".$value->NOMBRE."</option>";
+            echo "<option value='".$value->PRECIO_UNITARIO."'>".$value->PRECIO_UNITARIO."</option>";
         }
         echo "</select>
         </div>";
@@ -46,35 +42,36 @@ $reg = $query->seleccionar($cadena);
         extract($_POST);
         $consulta = new SELECT();
 
-        $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
+        $cadena = "SELECT * FROM PRODUCTOS WHERE PRODUCTOS.PRECIO_UNITARIO='$precio'";
         $tabla = $consulta->seleccionar($cadena);
 
-        echo "<table class='table table-hover'>
+        echo "<center><table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
         <th>Nombre</th>
-        <th>Detalle</th>
-        <th>Modificar</th>
-        <th>Registrar</th>
+        <th>Precio unitario</th>
+        <th>descuento/th>
+        <th>existencia</th>
+        <th>descripcion</th>
         </tr>
         </thead>
         <body>";
+
         foreach($tabla as $registro)
         {
             echo "<tr>";
+
             echo "<td> $registro->NOMBRE</td>";
-            echo "<td> $registro->DETALLE</td>";
-?>
-            <td><a href='editarcategoria.php?id=<?php echo $registro->ID_CAT ?>' class="btn btn-secondary">Modificar</a></td>
-            <td><a href='agregarcategoria.php?id=$registro->ID_CAT'></a></td>
-<?php
+            echo "<td> $registro->PRECIO_UNITARIO </td>";
+            echo "<td> $registro->DESCUENTO </td>";
+            echo "<td> $registro->EXISTENCIA </td>";
+            echo "<td> $registro->DESCRIPCION </td>";
             echo "</tr>";
-        }
+        } 
         echo "</body>";
         "</table>";
         }
         ?>
     </div>
-</div>
 </body>
 </html>

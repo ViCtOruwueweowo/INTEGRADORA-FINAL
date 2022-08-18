@@ -29,11 +29,12 @@ $reg = $query->seleccionar($cadena);
         foreach($reg as $value)
         {
             echo "<option value='".$value->ID_CAT."'>".$value->NOMBRE."</option>";
+            echo"<button type='submit' class='btn btn-lg btn-primary'>Ver</button>";
         }
         echo "</select>
         </div>";
         ?>
-        <button type="submit" class="btn btn-lg btn-primary">Ver</button>
+        
         </form>
         <br><br>
         
@@ -51,6 +52,8 @@ $reg = $query->seleccionar($cadena);
         <tr>
         <th>Nombre</th>
         <th>Detalle</th>
+        <th>Modifivcat</th>
+        <th>Registrar</th>
         </tr>
         </thead>
         <body>";
@@ -59,6 +62,7 @@ $reg = $query->seleccionar($cadena);
             echo "<tr>";
             echo "<td> $registro->NOMBRE</td>";
             echo "<td> $registro->DETALLE</td>";
+            echo "<td><a herf='modificar_categoria.php?id=$registro->ID_CAT'></td>";
             echo "</tr>";
         }
         echo "</body>";
