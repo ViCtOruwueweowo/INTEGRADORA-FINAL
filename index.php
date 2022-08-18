@@ -9,6 +9,7 @@
     <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/tablas.css">
     <link rel="stylesheet" href="css/cartas.css">
+    <link rel="stylesheet" href="css/fondo.css">
     <!---->
     <style>
       #carousel1{
@@ -24,7 +25,7 @@
     </style>
     <title>Document</title>
 </head>
-<body  style="background-image:url(https://www.xtrafondos.com/descargar.php?id=4052&resolucion=3840x2160)">
+<body>
     <!--Menu-->
 
     <?php
@@ -39,7 +40,7 @@
   ?>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,hsla(158, 80%, 40%, 0.356), rgba(0, 202, 229, 0.242)) ;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="color: white;">The Box Club</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -167,13 +168,17 @@
     <br>
     <h5 style="font-family:century gothic;color: white;text-align:center">¡No Te Vayas Aqui Esta Tu Resultado!</h5>
     <?php
-$altura= $_POST['Altura'];
-$peso= $_POST['Peso'];
-$imc = $peso/($altura^2);
-echo "<div style=color:white>TU IMC ES DE: .$imc";
-echo"</div>";
-
-              ?>
+	if($_POST)
+	{	
+		$num1 = $_POST
+		['Peso'];
+		$num2 = $_POST
+		['Altura'];
+		$suma = ($num1 
+		/ ($num2 * $num2));
+		echo "<div style=color:white>".$suma."<div>"; 
+	}
+?>
     <br>
     <div class="container" style="background-color: transparent;border:transparent">
       <table >

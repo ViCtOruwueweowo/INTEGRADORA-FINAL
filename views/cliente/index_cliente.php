@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../../css/tablas.css">
     <link rel="stylesheet" href="../../css/cartas.css">
     <link rel="stylesheet" href="css/fondo.css">
-
     <!---->
     <style>
       #carousel1{
@@ -26,13 +25,10 @@
     </style>
     <title>Document</title>
 </head>
-<body style="background-image:img_cliente/">
-    <!--Menu-->
+<body>
+<!--Menu-->
 
-   
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,#7c0078, rgb(235, 227, 227)) ;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,hsla(158, 80%, 40%, 0.356), rgba(0, 202, 229, 0.242)) ;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="color: white;">The Box Club</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,57 +39,28 @@
               
             </ul>
             <form class="d-flex">
-            <?php
+
+            <a class="nav-link active d-flex" aria-current="page" href="agregarEMP.php">Empleados</a>
+
+            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Categorias</a>
+
+            <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
+        <?php
   session_start();
   if(isset($_SESSION["CORREO"]))
   {
-    echo "<h5 align='right'>Usuario: ".$_SESSION["CORREO"]."</h5>";
-    echo "<h6 align='right'>
-    <a href='../CERRARsesion.php'>[Cerrar sesión]</a>
-    </h6>";
+
+ echo  
+            "<a class='nav-link active d-flex' href='../CERRARsesion.php'>Cerrar sesión</a>";
+  echo          "<a class='nav-link active d-flex'>".$_SESSION["CORREO"]."</a>";
+
   }
   ?>
-            <a class="nav-link active d-flex" aria-current="page" href="../inscripciongym.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
-  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-  <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-</svg>Inscripcion</a>
-           
-            <a class="nav-link active d-flex" aria-current="page" href="../ofertas.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
-  <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
-</svg>Ofertas</a>
-           
-
-            <a class="nav-link active d-flex" aria-current="page" href="../productos.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-            <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-            </svg>Productos</a>
-
-            <a class="nav-link active d-flex" aria-current="page" href="../carrito.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-</svg>Mi Carrito</a>
-           
-            <a class="nav-link active d-flex" aria-current="page" href="agregarEMP.php"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-</svg>  Yo</a>
-           
-      <?php
         
-        if(!isset($_SESSION["CORREO"]))
-        {
-          echo "<a class='nav-link active' aria-current='page' href='views/loginapp.php'><svg xmlns='http://www.w3.org/2000/svg' width='19' height='30' fill='currentColor' class='bi bi-person-circle' viewBox='0 0 16 16'>
-          <path d='M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z'/>
-          <path fill-rule='evenodd' d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z'/>
-        </svg>Iniciar sesión</a>
-          </li>";
-        }
-        ?>
-
-                  
-         
-            </form>
-          </div>
-        </div>
-      </nav>
+     
+    </div>
+  </div>
+</nav>
       <!---->
 <br>
 <!--Contenedor-->
@@ -152,13 +119,17 @@
     <br>
     <h5 style="font-family:century gothic;color: white;text-align:center">¡No Te Vayas Aqui Esta Tu Resultado!</h5>
     <?php
-$altura= $_POST['Altura'];
-$peso= $_POST['Peso'];
-$imc = $peso/($altura^2);
-echo "<div style=color:white>TU IMC ES DE: .$imc";
-echo"</div>";
-
-              ?>
+	if($_POST)
+	{	
+		$num1 = $_POST
+		['Peso'];
+		$num2 = $_POST
+		['Altura'];
+		$suma = ($num1 
+		/ ($num2 * $num2));
+		echo "<div style=color:white>".$suma."<div>"; 
+	}
+?>
     <br>
     <div class="container" style="background-color: transparent;border:transparent">
       <table >

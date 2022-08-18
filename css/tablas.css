@@ -15,12 +15,16 @@ table td{
     font-size: 18px;
 }
 table tr:hover{
-    background: rgb(109, 107, 107);
+    background: rgba(109, 107, 107, 0.544);
     font-size: 18px;
 }
 table td:hover{
-    background: rgb(221, 126, 217);
     color: rgb(7, 1, 1);
     text-align: center;
     font-size: 18px;
+    background: rgba(111, 255, 130, 0.77);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
 }

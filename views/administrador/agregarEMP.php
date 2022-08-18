@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta EMPLEADO</title>
+    <link rel="stylesheet" href="css/registro.css">
 </head> 
 <body>
 <div style="width: 50%; margin:auto;">
@@ -12,7 +13,7 @@
         <hr>
         <form action="GUARDEMPLEADO.php" method="post">
             <fieldset>
-                <legend>Alta EMPLEADO</legend> 
+                
                 <br>
                 <label for="Fecha">NOMBRES:</label>
                 <input type="text" name="nombre"  required placeholder=" "> <br><br>
@@ -38,7 +39,7 @@
                 <label for="Fecha">CONTRASEÑA:</label>
                 <input type="password" name="password"  required placeholder=" "> <br><br>
 
-                <input class="boton" type="submit" value="Guardar" name="Guardar">
+                <input class="boton" type="submit" value="Guardar" name="boton">
         </form>
 </body>
 </html> 

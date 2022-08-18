@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registro.css">
     <title>Alta usuario</title>
 </head> 
 <body>
@@ -30,7 +31,7 @@
                 <input type="text" name="user"  required placeholder=" "> <br><br>
                 
                 <label for="Fecha">FECHA DE NACIMIENTO:</label>
-                <input type="date" name="fnac"  required placeholder=" "> <br><br>
+                <input type="date" name="fnac" max="2021-02-02" required placeholder=" "> <br><br>
                 
                 <label for="Fecha">CÓDIGO POSTAL:</label>
                 <input type="text" name="cp"  required placeholder=" "> <br><br>
