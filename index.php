@@ -168,7 +168,7 @@
     <br>
     <h5 style="font-family:century gothic;color: white;text-align:center">¡No Te Vayas Aqui Esta Tu Resultado!</h5>
     <?php
-<<<<<<< HEAD
+
 	if($_POST)
 	{	
 		$num1 = $_POST
@@ -180,15 +180,8 @@
 		echo "<div style=color:white>".$suma."<div>"; 
 	}
 ?>
-=======
-$altura= $_POST['Altura'];
-$peso= $_POST['Peso'];
-$imc = $peso/($altura^2);
-echo "<div style=color:white>TU IMC ES DE: $imc";
-echo"</div>";
 
-              ?>
->>>>>>> 137c9f5b55b0fb05d01d123688b9f8befaf41e3c
+
     <br>
     <div class="container" style="background-color: transparent;border:transparent">
       <table >
