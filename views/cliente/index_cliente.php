@@ -30,7 +30,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,hsla(158, 80%, 40%, 0.356), rgba(0, 202, 229, 0.242)) ;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="color: white;">The Box Club</a>
+          <a class="navbar-brand" style="color: white;">The Box Club</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -39,16 +39,13 @@
               
             </ul>
             <form class="d-flex">
-<<<<<<< HEAD
-            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Categorias</a>
-=======
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Productos</a>
+            <a class="nav-link active d-flex" aria-current="page" href="#">Categorias</a>
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Productos</a>
+            <a class="nav-link active d-flex" aria-current="page" href="#">Productos</a>
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Ofertas</a>
->>>>>>> 6e5198460668a58c737ac541b1d476f466448bed
+            <a class="nav-link active d-flex" aria-current="page" href="#">Ofertas</a>
+
         <?php
   session_start();
   if(isset($_SESSION["CORREO"]))

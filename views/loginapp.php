@@ -34,6 +34,11 @@
 
   
   ?>
+
+  <?php
+  if(!isset($_SESSION["CORREO"]))
+  {
+  ?>
 <form action="validar.php" method="post" cl>
 
 <h1 class="animate_animated animate_backInLeft">Iniciar Sesion</h1>
@@ -46,5 +51,8 @@
 </div>
 <br><br>
 <span>¿No tienes cuenta?<a class="olvide" href="formALTAUSUARIO.php">Registrate</a></span>
+<?php
+  }
+  ?>
 </body>
 </html>
