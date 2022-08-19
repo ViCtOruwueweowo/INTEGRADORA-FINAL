@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <title>Registro</title>
+        <title>Edicion</title>
     </head>
     <body>
         <div class="container">
@@ -16,12 +16,11 @@
                 $insert = new Select();
                 extract($_POST);
 
-                $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',DESCRIPCION='$descripcion' where CVE_P=1";
-                $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',PROV='$proveedor',DESCRIPCION='$descripcion' where CVE_P=$cve";
+                $cadena = "UPDATE USUARIO SET NOMBRES='$nombre',APELLIDOS='$apellido',DIRECCION='$direccion',TELEFONO='$telefono',CORREO='$correo' where ID_US=$cve";
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>
-                PRODUCTO MODIFICADA</div>";
+                Datos Actualizados</div>";
                 header("refresh:4 ../administrador/index_admin.php")
             ?>
         </div>

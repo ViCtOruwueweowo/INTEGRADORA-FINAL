@@ -20,7 +20,7 @@
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>
-                EMPLEADO MODIFICADA</div>";
+                EMPLEADO MODIFICADO</div>";
                 header("refresh:4 ../administrador/index_admin.php")
             ?>
         </div>

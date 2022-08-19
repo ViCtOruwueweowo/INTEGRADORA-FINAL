@@ -39,7 +39,7 @@
             </ul>
             <form class="d-flex">
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Proveedores</a>
+            <a class="nav-link active d-flex" aria-current="page" href="proveedor.php">Proveedores</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="productos.php">Productos</a>
         <?php

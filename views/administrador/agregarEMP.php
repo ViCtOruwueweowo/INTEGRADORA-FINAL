@@ -31,7 +31,7 @@
                 <input type="text" name="user"  required placeholder=" "> <br><br>
                 
                 <label for="Fecha">FECHA DE NACIMIENTO:</label>
-                <input type="date" name="fnac" max="2021-02-02"  required placeholder=" "> <br><br>
+                <input type="date" name="fnac" max="2022-08-19"  required placeholder=" "> <br><br>
                 
                 <label for="Fecha">CÓDIGO POSTAL:</label>
                 <input type="text" name="cp"  required placeholder=" "> <br><br>

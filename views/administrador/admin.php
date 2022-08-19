@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1 align="center">PROVEEDORES</h1>
+<h1 align="center">EMPLEADOS</h1>
 
 <form action="#" method="post">
 <?php
@@ -19,7 +19,7 @@ require("../../vendor/autoload.php");
 
 $query = new select();
 
-$cadena= "SELECT ID_PRO, NOMBRE, DIRECCION, CORREO, TELEFONO, CIUDAD FROM PROVEEDOR";
+$cadena= "SELECT ID_US, NOMBRES, APELLIDOS, DIRECCION, TELEFONO, CORREO FROM USUARIO WHERE USUARIO.NIVEL_USUARIO=3";
 
 $reg = $query->seleccionar($cadena);
 
@@ -30,7 +30,7 @@ $reg = $query->seleccionar($cadena);
         <select name='nombre' class='form-select'>";
         foreach($reg as $value)
         {
-            echo "<option value='".$value->ID_PRO."'>".$value->NOMBRE."</option>";
+            echo "<option value='".$value->ID_US."'>".$value->NOMBRES."</option>";
         }
         echo "</select>
         </div>";
@@ -45,32 +45,35 @@ $reg = $query->seleccionar($cadena);
         extract($_POST);
         $consulta = new SELECT();
 
-        $cadena = "SELECT * FROM PROVEEDOR where PROVEEDOR.ID_PRO=$nombre";
+        $cadena = "SELECT * FROM USUARIO where USUARIO.ID_US=$nombre";
         $tabla = $consulta->seleccionar($cadena);
 
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
-        <th>Nombre</th>
-        <th>Direccion</th>
-        <th>Correo</th>
-        <th>Telefono</th>
-        <th>Ciudad</th>
-        <th>Modificar</th>
+        <th  style='color:white'>Nombre</th>
+        <th  style='color:white'>Apellidos</th>
+        <th  style='color:white'>Direccion</th>
+        <th  style='color:white'>Telefono</th>
+        <th  style='color:white'>Correo</th>
+        <th  style='color:white'>Modificar</th>
+        <th  style='color:white'>Descripcion</th>
         </tr>
         </thead>
         <body>";
+
         foreach($tabla as $registro)
         {
-            echo "<tr>";
-            echo "<td> $registro->NOMBRE</td>";
+            echo "<tr style=' background: rgba(109, 107, 107, 0.544);
+            font-size: 22px;color:white'>";
+            echo "<td> $registro->NOMBRES</td>";
+            echo "<td> $registro->APELLIDOS</td>";
             echo "<td> $registro->DIRECCION</td>";
-            echo "<td> $registro->CORREO</td>";
             echo "<td> $registro->TELEFONO</td>";
-            echo "<td> $registro->CIUDAD</td>";
-
+            echo "<td> $registro->CORREO</td>";
+            "</tr>";
 ?>
-            <td><a href='editarprov.php?id=<?php echo $registro->ID_PRO ?>' class="btn btn-secondary">Modificar</a></td>
+            <td><a href='editaremp.php?id=<?php echo $registro->ID_US ?>' class="btn btn-secondary">Modificar</a></td>
 <?php
             echo "</tr>";
         }
@@ -78,5 +81,7 @@ $reg = $query->seleccionar($cadena);
         "</table>";
         }
         ?>
+    </div>
+</div>
 </body>
 </html>
