@@ -9,7 +9,7 @@
 </head> 
 <body>
 <div style="width: 50%; margin:auto;">
-        <h3>Registro</h3>
+        <h3>Registro Empleado</h3>
         <hr>
         <form action="GUARDEMPLEADO.php" method="post">
             <fieldset>

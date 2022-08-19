@@ -29,7 +29,7 @@
 
    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(87deg,hsla(158, 80%, 40%, 0.356), rgba(0, 202, 229, 0.242)) ;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="color: white;">The Box Club</a>
+          <a class="navbar-brand" href="" style="color: white;">The Box Club</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -41,7 +41,7 @@
 
             <a class="nav-link active d-flex" aria-current="page" href="proveedor.php">Proveedores</a>
 
-            <a class="nav-link active d-flex" aria-current="page" href="productos.php">Productos</a>
+            <a class="nav-link active d-flex" aria-current="page" href="../../carrera/index.php">Productos</a>
         <?php
   session_start();
   if(isset($_SESSION["CORREO"]))

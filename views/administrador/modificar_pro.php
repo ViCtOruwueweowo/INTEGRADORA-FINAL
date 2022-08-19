@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <title>Registro</title>
+        <title>Modificar</title>
     </head>
     <body>
         <div class="container">
@@ -15,9 +15,16 @@
 
                 $insert = new Select();
                 extract($_POST);
+<<<<<<< HEAD
 
                 $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',DESCRIPCION='$descripcion' where CVE_P=1";
                 $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',PROV='$proveedor',DESCRIPCION='$descripcion' where CVE_P=$cve";
+=======
+                $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',DESCRIPCION='$descripcion' where CVE_P=1";
+
+                $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',PROV='$proveedor',DESCRIPCION='$descripcion' where CVE_P=$cve";
+
+>>>>>>> 0b0e0c4984af011f3894c292fe08f0674301fa03
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>

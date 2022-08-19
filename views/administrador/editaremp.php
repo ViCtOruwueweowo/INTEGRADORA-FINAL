@@ -27,7 +27,7 @@ $consulta = "SELECT * FROM USUARIO where ID_US = $editar";
 $cc = $categoria->seleccionar($consulta);
 foreach($cc as $edit){}
 ?>
-        <h3>EMPLEADO</h3>
+        <h3>Modificar Empleado</h3>
         <hr>
         <form action="modificar_emp.php" method="post">
             <fieldset>

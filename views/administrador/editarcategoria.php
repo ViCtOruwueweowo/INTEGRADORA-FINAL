@@ -27,7 +27,7 @@ $consulta = "SELECT * FROM CATEGORIAS where ID_CAT = $editar";
 $cc = $categoria->seleccionar($consulta);
 foreach($cc as $edit){}
 ?>
-        <h3>Registro de Categoria</h3>
+        <h3>Modificar categoria</h3>
         <hr>
         <form action="modificar_categoria.php" method="post">
             <fieldset>

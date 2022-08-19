@@ -27,7 +27,7 @@ $consulta = "SELECT * FROM PROVEEDOR where ID_PRO = $editar";
 $cc = $categoria->seleccionar($consulta);
 foreach($cc as $edit){}
 ?>
-        <h3>Registro de Categoria</h3>
+        <h3>Modificar Proveedor</h3>
         <hr>
         <form action="modificar_prov.php" method="post">
             <fieldset>
