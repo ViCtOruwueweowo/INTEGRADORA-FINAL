@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/fondo.css">
     <link rel="stylesheet" href="../css/bootstrap.css.min">
         <link rel="stylesheet" href="css/registro.css">
-    <title>Document</title>
+    <title>Categorias</title>
 </head>
 <body>
 <h1 align="center">CATEGORIAS</h1>
