@@ -49,36 +49,20 @@ $reg = $query->seleccionar($cadena);
         $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
         $tabla = $consulta->seleccionar($cadena);
 
-<<<<<<< HEAD
-        echo "<table class='table table-hover' >
-        <thead class='table-success'>
-        <tr style=' background: rgba(109, 107, 107, 0.544);
-        font-size: 22px;'>
-        <th style='color:white'>Nombre</th>
-        <th style='color:white'>Detalle</th>
-        <th style='color:white'>Modificar</th>
-    
-=======
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
         <th>Nombre</th>
         <th>Detalle</th>
         <th>Modificar</th>
->>>>>>> 5722ccb1b52a4d8c33d25598c51034a2cb1cb7ca
         </tr>
         </thead>
         <body>";
         foreach($tabla as $registro)
         {
-            echo "<tr style=' background: rgba(109, 107, 107, 0.544);
-            font-size: 22px;color:white'>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->NOMBRE</td>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;
-            font-size: 18px;color:white'> $registro->DETALLE</td>";
+            echo "<tr>";
+            echo "<td> $registro->NOMBRE</td>";
+            echo "<td> $registro->DETALLE</td>";
 ?>
             <td><a href='editarcategoria.php?id=<?php echo $registro->ID_CAT ?>' class="btn btn-secondary">Modificar</a></td>
 <?php

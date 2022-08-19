@@ -33,7 +33,7 @@ foreach($cc as $edit){}
             <fieldset>
             
                 <br>
-                <input type="text" hidden>
+                <input type="text" hidden name="cve" value='<?php echo $edit->ID_CAT?>'>
                 <label for="Fecha">NOMBRE:</label>
                 <input type="text" name="nombre"  required placeholder="" value='<?php echo $edit->NOMBRE  ?>'> <br><br>
 
