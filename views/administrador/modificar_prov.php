@@ -16,7 +16,7 @@
                 $insert = new Select();
                 extract($_POST);
 
-                $cadena = "UPDATE PROVEEDOR SET NOMBRE='$nombre',DIRECCION='$direccion',CORREO='$correo',TELEFONO='$telefono',CIUDAD='$ciudad' where ID_PRO=1";
+                $cadena = "UPDATE PROVEEDOR SET NOMBRE='$nombre',DIRECCION='$direccion',CORREO='$correo',TELEFONO='$telefono',CIUDAD='$ciudad' where ID_PRO=$cve";
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>

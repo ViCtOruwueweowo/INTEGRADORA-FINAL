@@ -16,7 +16,7 @@
                 $insert = new Select();
                 extract($_POST);
 
-                $cadena = "UPDATE CATEGORIAS SET NOMBRE='$nombre',DETALLE='$detalle' where id_cat=1";
+                $cadena = "UPDATE CATEGORIAS SET NOMBRE='$nombre',DETALLE='$detalle' where ID_CAT='$cve'";
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>

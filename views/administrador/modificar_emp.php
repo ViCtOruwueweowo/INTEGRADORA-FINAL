@@ -16,7 +16,7 @@
                 $insert = new Select();
                 extract($_POST);
 
-                $cadena = "UPDATE USUARIO SET NOMBRES='$nombre',APELLIDOS='$apellido',DIRECCION='$direccion',TELEFONO='$telefono',CORREO='$correo' where ID_US=1";
+                $cadena = "UPDATE USUARIO SET NOMBRES='$nombre',APELLIDOS='$apellido',DIRECCION='$direccion',TELEFONO='$telefono',CORREO='$correo' where ID_US=$cve";
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>
