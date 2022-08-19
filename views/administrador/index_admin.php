@@ -45,14 +45,9 @@
 
             <a class="nav-link active d-flex" aria-current="page" href="categoriasdulce.php">Categorias</a>
 
-
-            <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
-
-
             <a class="nav-link active d-flex" aria-current="page" href="proveedores.php">Proveedores</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="empleados.php">Empleados</a>
-
 
             <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Alta Categorias</a>
 
