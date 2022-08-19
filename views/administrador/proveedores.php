@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/fondo.css">
-    <link rel="stylesheet" href="../css/bootstrap.css.min">
-        <link rel="stylesheet" href="css/registro.css">
-    <title>Categorias</title>
+    <title>Document</title>
 </head>
 <body>
-<h1 align="center">CATEGORIAS</h1>
+<h1 align="center">PROVEEDORES</h1>
 
 <form action="#" method="post">
 <?php
@@ -20,18 +17,18 @@ require("../../vendor/autoload.php");
 
 $query = new select();
 
-$cadena= "SELECT ID_CAT, NOMBRE, DETALLE FROM categorias";
+$cadena= "SELECT ID_PRO, NOMBRE, DIRECCION, CORREO, TELEFONO, CIUDAD FROM PROVEEDOR";
 
 $reg = $query->seleccionar($cadena);
 
         echo "<div class='mb-3>'
         <label class='control-label'>
-        CATEGORIA
+        NOMBRE:
         </label>
         <select name='nombre' class='form-select'>";
         foreach($reg as $value)
         {
-            echo "<option value='".$value->ID_CAT."'>".$value->NOMBRE."</option>";
+            echo "<option value='".$value->ID_PRO."'>".$value->NOMBRE."</option>";
         }
         echo "</select>
         </div>";
@@ -46,14 +43,17 @@ $reg = $query->seleccionar($cadena);
         extract($_POST);
         $consulta = new SELECT();
 
-        $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
+        $cadena = "SELECT * FROM PROVEEDOR where PROVEEDOR.ID_PRO=$nombre";
         $tabla = $consulta->seleccionar($cadena);
 
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
         <th>Nombre</th>
-        <th>Detalle</th>
+        <th>Direccion</th>
+        <th>Correo</th>
+        <th>Telefono</th>
+        <th>Ciudad</th>
         <th>Modificar</th>
         </tr>
         </thead>
@@ -62,9 +62,13 @@ $reg = $query->seleccionar($cadena);
         {
             echo "<tr>";
             echo "<td> $registro->NOMBRE</td>";
-            echo "<td> $registro->DETALLE</td>";
+            echo "<td> $registro->DIRECCION</td>";
+            echo "<td> $registro->CORREO</td>";
+            echo "<td> $registro->TELEFONO</td>";
+            echo "<td> $registro->CIUDAD</td>";
+
 ?>
-            <td><a href='editarcategoria.php?id=<?php echo $registro->ID_CAT ?>' class="btn btn-secondary">Modificar</a></td>
+            <td><a href='editarprov.php?id=<?php echo $registro->ID_PRO ?>' class="btn btn-secondary">Modificar</a></td>
 <?php
             echo "</tr>";
         }
@@ -72,7 +76,5 @@ $reg = $query->seleccionar($cadena);
         "</table>";
         }
         ?>
-    </div>
-</div>
 </body>
 </html>

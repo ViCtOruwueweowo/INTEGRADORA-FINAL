@@ -21,7 +21,7 @@ require("../../vendor/autoload.php");
 $editar=$_GET['id'];
 
 $categoria = new Select();
-$consulta = "SELECT * FROM CATEGORIAS where ID_CAT = $editar";
+$consulta = "SELECT * FROM PROVEEDOR where ID_PRO = $editar";
 
 
 $cc = $categoria->seleccionar($consulta);
@@ -29,7 +29,7 @@ foreach($cc as $edit){}
 ?>
         <h3>Registro de Categoria</h3>
         <hr>
-        <form action="modificar_categoria.php" method="post">
+        <form action="modificar_prov.php" method="post">
             <fieldset>
             
                 <br>
@@ -37,9 +37,17 @@ foreach($cc as $edit){}
                 <label for="Fecha">NOMBRE:</label>
                 <input type="text" name="nombre"  required placeholder="" value='<?php echo $edit->NOMBRE  ?>'> <br><br>
 
-                <label for="Fecha">DETALLE:</label>
-                <input type="text" name="detalle"  required placeholder="" value='<?php echo $edit->DETALLE ?>'> <br><br>
+                <label for="Fecha">DIRECCION:</label>
+                <input type="text" name="direccion"  required placeholder="" value='<?php echo $edit->DIRECCION ?>'> <br><br>
 
+                <label for="Fecha">CORREO:</label>
+                <input type="text" name="correo"  required placeholder="" value='<?php echo $edit->CORREO?>'> <br><br>
+
+                <label for="Fecha">TELEFONO:</label>
+                <input type="text" name="telefono"  required placeholder="" value='<?php echo $edit->TELEFONO?>'> <br><br>
+                
+                <label for="Fecha">CIUDAD:</label>
+                <input type="text" name="ciudad"  required placeholder="" value='<?php echo $edit->CIUDAD?>'> <br><br>
                 
                 <input class="boton" type="submit" value="Guardar" name="Guardar">
                 
