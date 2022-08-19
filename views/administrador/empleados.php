@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1 align="center">PROVEEDORES</h1>
+<h1 align="center">EMPLEADOS</h1>
 
 <form action="#" method="post">
 <?php
@@ -17,7 +17,7 @@ require("../../vendor/autoload.php");
 
 $query = new select();
 
-$cadena= "SELECT CVE_P, NOMBRE, PRECIO_UNITARIO, DESCUENTO, EXISTENCIA, CATEGORIA, PROV, DESCRIPCION FROM PRODUCTOS";
+$cadena= "SELECT ID_US, NOMBRES, APELLIDOS, DIRECCION, TELEFONO, CORREO FROM USUARIO WHERE USUARIO.NIVEL_USUARIO=2";
 
 $reg = $query->seleccionar($cadena);
 
@@ -28,7 +28,7 @@ $reg = $query->seleccionar($cadena);
         <select name='nombre' class='form-select'>";
         foreach($reg as $value)
         {
-            echo "<option value='".$value->CVE_P."'>".$value->NOMBRE."</option>";
+            echo "<option value='".$value->ID_US."'>".$value->NOMBRES."</option>";
         }
         echo "</select>
         </div>";
@@ -43,35 +43,32 @@ $reg = $query->seleccionar($cadena);
         extract($_POST);
         $consulta = new SELECT();
 
-        $cadena = "SELECT PRODUCTOS.CVE_P,PRODUCTOS.NOMBRE,PRODUCTOS.PRECIO_UNITARIO,PRODUCTOS.DESCUENTO,PRODUCTOS.EXISTENCIA,CATEGORIAS.NOMBRE AS NOM_C,PROVEEDOR.NOMBRE AS NOM_P,PRODUCTOS.DESCRIPCION FROM PRODUCTOS INNER JOIN PROVEEDOR ON PROVEEDOR.ID_PRO=PRODUCTOS.PROV INNER JOIN CATEGORIAS ON CATEGORIAS.ID_CAT=PRODUCTOS.CATEGORIA where PRODUCTOS.CVE_P=$nombre";
+        $cadena = "SELECT * FROM USUARIO where USUARIO.ID_US=$nombre";
         $tabla = $consulta->seleccionar($cadena);
 
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
         <th>Nombre</th>
-        <th>Precio</th>
-        <th>Descuento</th>
-        <th>Existencia</th>
-        <th>Categoria</th>
-        <th>Proveedor</th>
-        <th>Descripcion</th>
+        <th>Apellidos</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Correo</th>
+        <th>Modificar</th>
         </tr>
         </thead>
         <body>";
         foreach($tabla as $registro)
         {
             echo "<tr>";
-            echo "<td> $registro->NOMBRE</td>";
-            echo "<td> $registro->PRECIO_UNITARIO</td>";
-            echo "<td> $registro->DESCUENTO</td>";
-            echo "<td> $registro->EXISTENCIA</td>";
-            echo "<td> $registro->NOM_C</td>";
-            echo "<td> $registro->NOM_P</td>";
-            echo "<td> $registro->DESCRIPCION</td>";
+            echo "<td> $registro->NOMBRES</td>";
+            echo "<td> $registro->APELLIDOS</td>";
+            echo "<td> $registro->DIRECCION</td>";
+            echo "<td> $registro->TELEFONO</td>";
+            echo "<td> $registro->CORREO</td>";
 
 ?>
-            <td><a href='editarpro.php?id=<?php echo $registro->CVE_P?>' class="btn btn-secondary">Modificar</a></td>
+            <td><a href='editaremp.php?id=<?php echo $registro->ID_US ?>' class="btn btn-secondary">Modificar</a></td>
 <?php
             echo "</tr>";
         }
@@ -79,5 +76,7 @@ $reg = $query->seleccionar($cadena);
         "</table>";
         }
         ?>
+    </div>
+</div>
 </body>
 </html>

@@ -41,18 +41,26 @@
 
 
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarEMP.php">Empleados</a>
+            <a class="nav-link active d-flex" aria-current="page" href="productos.php">Productos</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="categoriasdulce.php">Categorias</a>
 
+<<<<<<< HEAD
             <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
 
+=======
+            <a class="nav-link active d-flex" aria-current="page" href="proveedores.php">Proveedores</a>
+
+            <a class="nav-link active d-flex" aria-current="page" href="empleados.php">Empleados</a>
+>>>>>>> 5722ccb1b52a4d8c33d25598c51034a2cb1cb7ca
 
             <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Alta Categorias</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Alta Proveedores</a>
                      
             <a class="nav-link active" aria-current="page" href="agregarproducto.php">Alta Productos</a>
+
+            <a class="nav-link active" aria-current="page" href="agregarEMP.php">Alta Empleados</a>
                   
 
             <?php
@@ -69,7 +77,10 @@
 
 </div>
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5722ccb1b52a4d8c33d25598c51034a2cb1cb7ca
             </form>
           </div>
         </div>
