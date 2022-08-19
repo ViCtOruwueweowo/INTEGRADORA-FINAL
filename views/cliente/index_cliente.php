@@ -40,11 +40,11 @@
             </ul>
             <form class="d-flex">
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarEMP.php">Empleados</a>
+            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Productos</a>
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Categorias</a>
+            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Productos</a>
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
+            <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Ofertas</a>
         <?php
   session_start();
   if(isset($_SESSION["CORREO"]))
