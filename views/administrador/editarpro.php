@@ -47,10 +47,10 @@ foreach($cc as $edit){}
                 <input type="text" name="existencia"  required placeholder="" value='<?php echo $edit->EXISTENCIA?>'> <br><br>
                 
                 <label for="Fecha">CATEGORIA:</label>
-                <input type="text" name="categoria"  required placeholder="" value='<?php echo $edit->NOM_C?>'> <br><br>
+                <input type="text" name="categoria" placeholder="<?php echo $edit->NOM_C?>"> <br><br>
 
                 <label for="Fecha">PROVEEDOR:</label>
-                <input type="text" name="proveedor"  required placeholder="" value='<?php echo $edit->NOM_P?>'> <br><br>
+                <input type="text" name="proveedor" placeholder="<?php echo $edit->NOM_P?>"> <br><br>
                 
                 <label for="Fecha">DESCRIPCION:</label>
                 <input type="text" name="descripcion"  required placeholder="" value='<?php echo $edit->DESCRIPCION?>'> <br><br>
