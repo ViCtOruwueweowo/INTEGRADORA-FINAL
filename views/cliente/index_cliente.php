@@ -95,9 +95,8 @@
 </div>
       <!--Fin contenedor-->
 
-
-      <!--IMC-->
-<div class="container">
+   <!--IMC-->
+   <div class="container">
   <br>
   <div class="container" style="background-color: transparent; border-color:transparent ;">
     <h3 style="font-family:century gothic;color: white;font-size:50px;text-align:center"><b>IMC</b></h3>
@@ -119,6 +118,7 @@
     <br>
     <h5 style="font-family:century gothic;color: white;text-align:center">¡No Te Vayas Aqui Esta Tu Resultado!</h5>
     <?php
+
 	if($_POST)
 	{	
 		$num1 = $_POST

@@ -16,7 +16,8 @@ table td{
 }
 table tr:hover{
     background: rgba(109, 107, 107, 0.544);
-    font-size: 18px;
+    font-size: 22px;
+    
 }
 table td:hover{
     color: rgb(7, 1, 1);
