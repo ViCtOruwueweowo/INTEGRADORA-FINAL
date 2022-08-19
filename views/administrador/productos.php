@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1 align="center">PROVEEDORES</h1>
+<h1 align="center">PRODUCTOS</h1>
 
 <form action="#" method="post">
 <?php

@@ -56,7 +56,6 @@ $reg = $query->seleccionar($cadena);
         <th>Correo</th>
         <th>Telefono</th>
         <th>Ciudad</th>
-        <th>Modificar</th>
         </tr>
         </thead>
         <body>";
@@ -70,7 +69,6 @@ $reg = $query->seleccionar($cadena);
             echo "<td> $registro->CIUDAD</td>";
 
 ?>
-            <td><a href='editarprov.php?id=<?php echo $registro->ID_PRO ?>' class="btn btn-secondary">Modificar</a></td>
 <?php
             echo "</tr>";
         }

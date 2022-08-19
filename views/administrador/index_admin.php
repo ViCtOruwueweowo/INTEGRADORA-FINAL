@@ -45,16 +45,11 @@
 
             <a class="nav-link active d-flex" aria-current="page" href="categoriasdulce.php">Categorias</a>
 
-<<<<<<< HEAD
             <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
 
 
             <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
 
-
-
-=======
->>>>>>> 0b0e0c4984af011f3894c292fe08f0674301fa03
             <a class="nav-link active d-flex" aria-current="page" href="proveedores.php">Proveedores</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="empleados.php">Empleados</a>
@@ -83,17 +78,9 @@
 
 </div>
 </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 0b0e0c4984af011f3894c292fe08f0674301fa03
             </form>
           </div>
         </div>
       </nav>
-<<<<<<< HEAD
-
-=======
->>>>>>> 0b0e0c4984af011f3894c292fe08f0674301fa03
 </body>
 </html>

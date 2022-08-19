@@ -69,11 +69,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach($resultado as $row ) {?>
 
         
-            <div class="col">
+            <div class="col-md-2">
               <div class="card shadow-sm">
                 <img src="">
                 <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column justify-content-between align-items-center">
                   <h5 class="card-title"><?php echo $row['NOMBRE']?></h5><BR></BR>
                   <p class="card-taitle">$ <?php echo number_format($row['PRECIO_UNITARIO'], 2, '.', ',');?></p><br>
                   <p class="card-taitle"> <?php echo $row['DESCRIPCION'];?></p><br>
