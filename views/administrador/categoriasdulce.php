@@ -49,6 +49,18 @@ $reg = $query->seleccionar($cadena);
         $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
         $tabla = $consulta->seleccionar($cadena);
 
+<<<<<<< HEAD
+
+        echo "<table class='table table-hover' >
+        <thead class='table-success'>
+        <tr style=' background: rgba(109, 107, 107, 0.544);
+        font-size: 22px;'>
+        <th style='color:white'>Nombre</th>
+        <th style='color:white'>Detalle</th>
+        <th style='color:white'>Modificar</th>";
+
+   
+=======
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
@@ -58,6 +70,7 @@ $reg = $query->seleccionar($cadena);
         </tr>
         </thead>
         <body>";
+>>>>>>> f96dcaa0cc7e6380e5c7645c2b6a478d4e27a8d3
         foreach($tabla as $registro)
         {
             echo "<tr>";

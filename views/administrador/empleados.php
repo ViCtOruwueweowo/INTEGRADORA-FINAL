@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registro.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -49,24 +51,27 @@ $reg = $query->seleccionar($cadena);
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Direccion</th>
-        <th>Telefono</th>
-        <th>Correo</th>
-        <th>Modificar</th>
+        <th  style='color:white'>Nombre</th>
+        <th  style='color:white'>Apellidos</th>
+        <th  style='color:white'>Direccion</th>
+        <th  style='color:white'>Telefono</th>
+        <th  style='color:white'>Correo</th>
+        <th  style='color:white'>Modificar</th>
+        <th  style='color:white'>Descripcion</th>
         </tr>
         </thead>
         <body>";
+
         foreach($tabla as $registro)
         {
-            echo "<tr>";
+            echo "<tr style=' background: rgba(109, 107, 107, 0.544);
+            font-size: 22px;color:white'>";
             echo "<td> $registro->NOMBRES</td>";
             echo "<td> $registro->APELLIDOS</td>";
             echo "<td> $registro->DIRECCION</td>";
             echo "<td> $registro->TELEFONO</td>";
             echo "<td> $registro->CORREO</td>";
-
+            "</tr>";
 ?>
             <td><a href='editaremp.php?id=<?php echo $registro->ID_US ?>' class="btn btn-secondary">Modificar</a></td>
 <?php
