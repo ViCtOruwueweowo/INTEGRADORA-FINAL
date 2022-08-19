@@ -45,14 +45,12 @@
 
             <a class="nav-link active d-flex" aria-current="page" href="categoriasdulce.php">Categorias</a>
 
-<<<<<<< HEAD
             <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
 
-=======
             <a class="nav-link active d-flex" aria-current="page" href="proveedores.php">Proveedores</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="empleados.php">Empleados</a>
->>>>>>> 5722ccb1b52a4d8c33d25598c51034a2cb1cb7ca
+
 
             <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Alta Categorias</a>
 
@@ -77,78 +75,10 @@
 
 </div>
 </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 5722ccb1b52a4d8c33d25598c51034a2cb1cb7ca
             </form>
           </div>
         </div>
       </nav>
-
-      <?php
-
-use MyApp\Query\select;
-require("../../vendor/autoload.php");
-
-$query = new select();
-
-$cadena= "SELECT ID_CAT, NOMBRE, DETALLE FROM categorias";
-
-$reg = $query->seleccionar($cadena);
-
-        echo "<div class='mb-3>'
-        <label class='control-label'>
-        CATEGORIAs
-        </label>
-        <select name='nombre' class='form-select'>";
-        foreach($reg as $value)
-        {
-            echo "<option value='".$value->ID_CAT."'>".$value->NOMBRE."</option>";
-        }
-        echo "</select>
-        </div>";
-        ?>
-        <button type="submit" class="btn btn-lg btn-primary">Ver</button>
-        </form>
-        <br><br>
-        
-        <?php
-        if($_POST)
-        {
-        extract($_POST);
-        $consulta = new SELECT();
-
-        $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
-        $tabla = $consulta->seleccionar($cadena);
-
-        echo "<table class='table table-hover'>
-        <thead class='table-dark'>
-        <tr>
-        <th>Nombre</th>
-        <th>Detalle</th>
-        <th>Modificar</th>
-        <th>Registrar</th>
-        </tr>
-        </thead>
-        <body>";
-        foreach($tabla as $registro)
-        {
-            echo "<tr>";
-            echo "<td> $registro->NOMBRE</td>";
-            echo "<td> $registro->DETALLE</td>";
-?>
-            <td><a href='editarcategoria.php?id=<?php echo $registro->ID_CAT ?>' class="btn btn-secondary">Modificar</a></td>
-            <td><a href='agregarcategoria.php?id=$registro->ID_CAT'></a></td>
-<?php
-            echo "</tr>";
-        }
-        echo "</body>";
-        "</table>";
-        }
-        ?>
-    </div>
-</div>
 
 </body>
 </html>
