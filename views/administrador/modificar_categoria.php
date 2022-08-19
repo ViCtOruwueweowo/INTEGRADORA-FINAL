@@ -10,17 +10,17 @@
     <body>
         <div class="container">
             <?php
-                use MyApp\Query\Ejecuta; 
+                use MyApp\Query\Select; 
                 require("../../vendor/autoload.php");
 
                 $insert = new Select();
                 extract($_POST);
 
-                $cadena = "UPDATE CATEGORIA SET NOMBRE='$nombre',DETALLE='$detalle' where id_cat=1";
+                $cadena = "UPDATE CATEGORIAS SET NOMBRE='$nombre',DETALLE='$detalle' where id_cat=1";
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>
-                CLIENTE REGISTRADO</div>";
+                CATEGORIA MODIFICADA</div>";
                 header("refresh:4 ../administrador/index_admin.php")
             ?>
         </div>

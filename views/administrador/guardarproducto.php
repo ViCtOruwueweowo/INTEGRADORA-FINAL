@@ -16,12 +16,12 @@
         extract($_POST);
 
         $cadena="INSERT INTO PRODUCTOS (NOMBRE,PRECIO_UNITARIO,DESCUENTO,EXISTENCIA,CATEGORIA,PROV,DESCRIPCION) 
-        VALUES('$producto','$precio','$descuento','$existencia','$categoria','$proveedor','$descripcion')";
+        VALUES('$producto','$precio','$descuento','$existencia','$categ','$proveedor' ,'$descripcion')";
 
         $usuario->ejecutar($cadena);
 
         echo "<div class='alert alert=success'>CATEGORIA REGISTRADA</div>";
-        header("refresh:4 ../administrador/index_admin.php");
+        header("refresh:3 ../administrador/index_admin.php");
         ?>
     </div>
 </body>

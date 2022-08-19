@@ -27,24 +27,59 @@
                 
                 <label for="Nombre">EXISTENCIAS:</label>
                 <input type="text" name="existencia" required placeholder=" "> <br><br>
-                
-                <label for="Fecha">CATEGORIA:</label>
-                <select name="categoria">
-                    <option value="1">Bebidas</option>
-                    <option value="2">Suplementos</option>
-                    <option value="3">Equipo de uso</option>
-                </select><br><br>
+        
 
-                <label for="proveedor">PROVEEDOR:</label>
-                <select name="proveedor">
-                    <option value="1">Pepsi</option>
-                    <option value="2">Under Armour</option>
-                    <option value="3">Chochos Adolfo</option>
-                    <option value="4">Nuka Cola</option>
-                    <option value="5">Suplemax</option>
-                    <option value="6">Wunderwaffle</option>
-                    <option value="8">Mr. increible</option>
-                </select><br><br>
+                <?php
+
+use MyApp\Query\select;
+require("../../vendor/autoload.php");
+
+$query = new select();
+
+$cadena= "SELECT ID_CAT, NOMBRE, DETALLE FROM categorias";
+
+$reg = $query->seleccionar($cadena);
+
+        echo "<div class='mb-3>'
+        <label class='control-label'>
+        CATEGORIA
+        </label>
+        <select name='categ' class='form-select'>";
+        foreach($reg as $value)
+        {
+            echo "<option value='".$value->ID_CAT."'>".$value->NOMBRE."</option>";
+        }
+        echo "</select>
+        </div>";
+
+                ?>
+<br>
+
+<?php
+
+require("../../vendor/autoload.php");
+
+$query = new select();
+
+$cadena= "SELECT PROVEEDOR.ID_PRO, PROVEEDOR.NOMBRE FROM PROVEEDOR";
+
+$reg = $query->seleccionar($cadena);
+
+        echo "<div class='mb-3>'
+        <label class='control-label'>
+        PROVEEDOR
+        </label>
+        <select name='proveedor' class='form-select'>";
+        foreach($reg as $value)
+        {
+            echo "<option value='".$value->ID_PRO."'>".$value->NOMBRE."</option>";
+        }
+        echo "</select>
+        </div>";
+
+                ?>
+<br>
+
 
                 <label for="Fecha">DESCRIPCION:</label>
                 <input type="text" name="descripcion"  required placeholder=" "> <br><br>

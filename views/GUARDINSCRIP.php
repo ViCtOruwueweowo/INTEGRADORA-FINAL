@@ -8,21 +8,20 @@
     <title>Usaurio registrado</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container"> 
         <?php
         use MyApp\Query\Ejecuta; 
         require("../vendor/autoload.php");
 
         $usuario = new Ejecuta();
         extract($_POST);
-        $HASH = password_hash($password, PASSWORD_DEFAULT);
-        $nivel1=(1);
-        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','$metodo','$fecha','$telefono','$user')";
+        $usfk="SELECT USUARIO.ID_US FROM USUARIO INNER JOIN INSCRIP_GYM ON USUARIO.ID_US=INSCRIP_GYM.USER_FK";
+        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','$metodo','$fecha','$telefono','$usfk')";
 
         $usuario->ejecutar($cadena);
 
         echo "<div class='alert alert=success'>USUARIO REGISTRADO</div>";
-        header("refresh:4 loginapp.php");
+        header("refresh:40 loginapp.php");
         ?>
     </div>
 </body>
