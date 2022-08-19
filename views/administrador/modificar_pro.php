@@ -16,7 +16,7 @@
                 $insert = new Select();
                 extract($_POST);
 
-                $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',PROV='$proveedor',DESCRIPCION='$descripcion' where CVE_P=1";
+                $cadena = "UPDATE PRODUCTOS SET NOMBRE='$nombre',PRECIO_UNITARIO='$precio',DESCUENTO='$descuento',EXISTENCIA='$existencia',PROV='$proveedor',DESCRIPCION='$descripcion' where CVE_P=$cve";
                 $insert->seleccionar($cadena);
                 
                 echo"<div class='alert alert-succes'>
