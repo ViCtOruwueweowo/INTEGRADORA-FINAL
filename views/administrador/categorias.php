@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/fondo.css">
-    <link rel="stylesheet" href="../css/bootstrap.css.min">
-        <link rel="stylesheet" href="css/registro.css">
-    <title>Categorias</title>
+    <title>Document</title>
 </head>
 <body>
 <h1 align="center">CATEGORIAS</h1>
@@ -16,27 +13,28 @@
 <?php
 
 use MyApp\Query\select;
-require("../../vendor/autoload.php");
+require("../vendor/autoload.php");
 
 $query = new select();
 
-$cadena= "SELECT ID_CAT, NOMBRE, DETALLE FROM categorias";
+$cadena= "SELECT ID_CAT, NOMBRE, DETALLE FROM CATEGORIA";
 
 $reg = $query->seleccionar($cadena);
 
         echo "<div class='mb-3>'
         <label class='control-label'>
-        CATEGORIA
+        fecha
         </label>
         <select name='nombre' class='form-select'>";
         foreach($reg as $value)
         {
             echo "<option value='".$value->ID_CAT."'>".$value->NOMBRE."</option>";
+            echo"<button type='submit' class='btn btn-lg btn-primary'>Ver</button>";
         }
         echo "</select>
         </div>";
         ?>
-        <button type="submit" class="btn btn-lg btn-primary">Ver</button>
+        
         </form>
         <br><br>
         
@@ -46,7 +44,7 @@ $reg = $query->seleccionar($cadena);
         extract($_POST);
         $consulta = new SELECT();
 
-        $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
+        $cadena = "SELECT * FROM CATEGORIA";
         $tabla = $consulta->seleccionar($cadena);
 
         echo "<table class='table table-hover'>
@@ -54,7 +52,8 @@ $reg = $query->seleccionar($cadena);
         <tr>
         <th>Nombre</th>
         <th>Detalle</th>
-        <th>Modificar</th>
+        <th>Modifivcat</th>
+        <th>Registrar</th>
         </tr>
         </thead>
         <body>";
@@ -63,9 +62,7 @@ $reg = $query->seleccionar($cadena);
             echo "<tr>";
             echo "<td> $registro->NOMBRE</td>";
             echo "<td> $registro->DETALLE</td>";
-?>
-            <td><a href='editarcategoria.php?id=<?php echo $registro->ID_CAT ?>' class="btn btn-secondary">Modificar</a></td>
-<?php
+            echo "<td><a herf='modificar_categoria.php?id=$registro->ID_CAT'></td>";
             echo "</tr>";
         }
         echo "</body>";

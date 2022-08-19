@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/fondo.css">
-    <link rel="stylesheet" href="../css/bootstrap.css.min">
-        <link rel="stylesheet" href="css/registro.css">
-    <title>Categorias</title>
+    <title>Document</title>
 </head>
 <body>
-<h1 align="center">CATEGORIAS</h1>
+<h1 align="center">EMPLEADOS</h1>
 
 <form action="#" method="post">
 <?php
@@ -20,18 +17,18 @@ require("../../vendor/autoload.php");
 
 $query = new select();
 
-$cadena= "SELECT ID_CAT, NOMBRE, DETALLE FROM categorias";
+$cadena= "SELECT ID_US, NOMBRES, APELLIDOS, DIRECCION, TELEFONO, CORREO FROM USUARIO WHERE USUARIO.NIVEL_USUARIO=2";
 
 $reg = $query->seleccionar($cadena);
 
         echo "<div class='mb-3>'
         <label class='control-label'>
-        CATEGORIA
+        NOMBRE:
         </label>
         <select name='nombre' class='form-select'>";
         foreach($reg as $value)
         {
-            echo "<option value='".$value->ID_CAT."'>".$value->NOMBRE."</option>";
+            echo "<option value='".$value->ID_US."'>".$value->NOMBRES."</option>";
         }
         echo "</select>
         </div>";
@@ -46,14 +43,17 @@ $reg = $query->seleccionar($cadena);
         extract($_POST);
         $consulta = new SELECT();
 
-        $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
+        $cadena = "SELECT * FROM USUARIO where USUARIO.ID_US=$nombre";
         $tabla = $consulta->seleccionar($cadena);
 
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
         <th>Nombre</th>
-        <th>Detalle</th>
+        <th>Apellidos</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Correo</th>
         <th>Modificar</th>
         </tr>
         </thead>
@@ -61,10 +61,14 @@ $reg = $query->seleccionar($cadena);
         foreach($tabla as $registro)
         {
             echo "<tr>";
-            echo "<td> $registro->NOMBRE</td>";
-            echo "<td> $registro->DETALLE</td>";
+            echo "<td> $registro->NOMBRES</td>";
+            echo "<td> $registro->APELLIDOS</td>";
+            echo "<td> $registro->DIRECCION</td>";
+            echo "<td> $registro->TELEFONO</td>";
+            echo "<td> $registro->CORREO</td>";
+
 ?>
-            <td><a href='editarcategoria.php?id=<?php echo $registro->ID_CAT ?>' class="btn btn-secondary">Modificar</a></td>
+            <td><a href='editaremp.php?id=<?php echo $registro->ID_US ?>' class="btn btn-secondary">Modificar</a></td>
 <?php
             echo "</tr>";
         }

@@ -39,12 +39,16 @@
               
             </ul>
             <form class="d-flex">
-
-            <a class="nav-link active d-flex" aria-current="page" href="agregarEMP.php">Empleados</a>
-
+<<<<<<< HEAD
             <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Categorias</a>
+=======
 
-            <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Proveedores</a>
+            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Productos</a>
+
+            <a class="nav-link active d-flex" aria-current="page" href="agregarcategoria.php">Productos</a>
+
+            <a class="nav-link active d-flex" aria-current="page" href="agregarproveedores.php">Ofertas</a>
+>>>>>>> 6e5198460668a58c737ac541b1d476f466448bed
         <?php
   session_start();
   if(isset($_SESSION["CORREO"]))
