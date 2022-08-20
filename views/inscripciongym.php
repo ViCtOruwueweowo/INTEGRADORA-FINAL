@@ -32,7 +32,7 @@
 <form action="GUARDINSCRIP.php" method="post" style="padding: 30px 10px;
 	background-color: #381b1ba6;
 	margin: calc(20% + 20px);
-	margin-top: 10px;
+	margin-top: 10px; 
 	padding-top: 18px;
 	margin-bottom: 10px">
 
