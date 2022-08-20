@@ -94,8 +94,6 @@ echo "</select>
 ?>
     </div>
 
-
-=======
     <title>Document</title>
 </head>
 <body>   
@@ -104,7 +102,6 @@ echo "</select>
 
         <?php
 
-use MyApp\Query\select;
 require("../vendor/autoload.php");
 
 $query = new select();
