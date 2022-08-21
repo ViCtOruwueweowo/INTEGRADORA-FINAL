@@ -51,10 +51,8 @@ $reg = $query->seleccionar($cadena);
         }
         echo "</select>
         </div>";
-
                 ?>
 <br>
-
 <?php
 
 require("../../vendor/autoload.php");

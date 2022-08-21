@@ -38,6 +38,9 @@
               
             </ul>
             <form class="d-flex">
+            <a class="nav-link active d-flex" aria-current="page" href="..\empleado\verOC-COMPLETA.php">Ver orden compra</a>
+
+            <a class="nav-link active d-flex" aria-current="page" href="..\empleado\formLLENADO_OC.php">Formulario de orden compra</a>
 
             <a class="nav-link active d-flex" aria-current="page" href="proveedor.php">Proveedores</a>
 
