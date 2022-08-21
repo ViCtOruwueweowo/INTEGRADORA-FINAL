@@ -24,7 +24,7 @@
     echo "<div class='alert alert-success'>
     ORDEN DE COMPRA REGISTRADA</div>";
 
-    header("refresh:3; formLLENADO_DOC.php"); 
+    header("refresh:3; index_emp.php"); 
 
     ?>
      </div>

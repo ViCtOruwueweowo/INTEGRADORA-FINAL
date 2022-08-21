@@ -17,7 +17,7 @@
 
     extract($_POST);
 
-    $cadena="INSERT INTO ORDEN_COMPRA (FECHA, USUARIO, PROVEEDOR) VALUES ('$fecha','$ide','$proveedor')";
+    $cadena="INSERT INTO ORDEN_COMPRA (FECHA, USUARIO, PROVEEDOR) VALUES ('$fecha','$nombre','$proveedor')";
 
     $insert->ejecutar($cadena);
 

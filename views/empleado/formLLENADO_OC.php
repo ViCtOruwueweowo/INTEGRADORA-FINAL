@@ -13,18 +13,38 @@
         <h2 class="titulo">HACER COMPRA COMO EMPLEADO</h2>
   
         <div class="padre">
-            <div class="1">
-                <label for="">AQUI VA LA FECHA</label>
-                <input type="date" name="fecha">
+            <div class="1" max='2022-08-25'>
+                <label for="">FECHA</label>
+                <input type="date" name="fecha" max="2022-08-25">
             </div>
             <div class="2">
-                <label for="">AQUI ID DEL EMPLEADO</label>
-                <input type="text" name="ide">
+    <?php
+
+        use MyApp\Query\select;
+        require("../../vendor/autoload.php");
+
+        $query = new select();
+
+        $cadena= "SELECT ID_US, NOMBRES, APELLIDOS, DIRECCION, TELEFONO, CORREO FROM USUARIO WHERE USUARIO.NIVEL_USUARIO=2";
+
+        $reg = $query->seleccionar($cadena);
+
+        echo "<div class='mb-3>'
+        <label class='control-label'>
+        Nombre empleado:
+        </label>
+        <select name='nombre' class='form-select'>";
+        foreach($reg as $value)
+        {
+            echo "<option value='".$value->ID_US."'>".$value->NOMBRES."</option>";
+        }
+        echo "</select>
+        </div>";
+        ?>
             </div>
 
             <div class="3">
             <?php
-        use MyApp\Query\Select;
         require("../../vendor/autoload.php");
 
         $query = new Select();
@@ -44,7 +64,6 @@
         </div>";
         ?>
             </div>
-            <label for="">DESPUES DE ESTO, SEGUIRÁ CON DOC, AHÍ VA A PONER LA OTRA INFO QUE SE LE PIDE Y AL ACABAR SOLO LE CONFIRMA, AHI PIENSA COMO Y BORRAS ESTO CUANDO ACABES, SUERTE</label>
             <br>
             <br>
             <div class="d-grip gap-2">

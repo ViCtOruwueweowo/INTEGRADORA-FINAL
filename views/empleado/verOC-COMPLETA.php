@@ -56,7 +56,6 @@ echo "</select>
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
-        <th>ORDEN DE COMPRA</th>
         <th>FECHA COMPRA</th>
         <th>EMPLEADO</th>
         <th>PRODUCTO</th>
@@ -71,7 +70,6 @@ echo "</select>
         foreach($tabla as $registro)
         {
             echo "<tr style='color:white'>";
-            echo "<td> $registro->ORDEN_COMPRA </td>";
             echo "<td> $registro->FECHA </td>";
             echo "<td> $registro->NOMBRES </td>";
             echo "<td> $registro->PROD </td>";
