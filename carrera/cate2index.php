@@ -37,11 +37,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
           <div class="collapse navbar-collapse" id="navbarHeader">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a href="..\carrera\index.php" class="nav-link active">Bebidas</a>
+                    <a href="..\carrera\index.php" class="nav-link">Bebidas</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="cate2index.php" class="nav-link">suplementos</a>
+                    <a href="cate2index.php" class="nav-link  active">suplementos</a>
                 </li>
                 <li class="nav-item">
                     <a href="categ3index.php" class="nav-link">Equipos deportivos</a>

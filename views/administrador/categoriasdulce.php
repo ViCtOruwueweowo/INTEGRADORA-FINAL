@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\administrador\css\bootstrap.min.css">
     <link rel="stylesheet" href="../css/fondo.css">
-    <link rel="stylesheet" href="../css/bootstrap.css.min">
-        <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/registro.css">
     <title>Categorias</title>
 </head>
 <body>
@@ -48,15 +48,7 @@ $reg = $query->seleccionar($cadena);
 
         $cadena = "SELECT * FROM categorias where categorias.id_cat=$nombre";
         $tabla = $consulta->seleccionar($cadena);
-
-        echo "<table class='table table-hover' >
-        <thead class='table-success'>
-        <tr style=' background: rgba(109, 107, 107, 0.544);
-        font-size: 22px;'>
-        <th style='color:white'>Nombre</th>
-        <th style='color:white'>Detalle</th>
-        <th style='color:white'>Modificar</th>";
-
+        
         echo "<table class='table table-hover'>
         <thead class='table-dark'>
         <tr>
@@ -68,7 +60,7 @@ $reg = $query->seleccionar($cadena);
         <body>";
         foreach($tabla as $registro)
         {
-            echo "<tr>";
+            echo "<tr style='color:white'>";
             echo "<td> $registro->NOMBRE</td>";
             echo "<td> $registro->DETALLE</td>";
 ?>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\empleado\css\bootstrap.min.css">
     <link rel="stylesheet" href="css/registro.css">
 
     <title>Document</title>
@@ -61,7 +62,7 @@ $reg = $query->seleccionar($cadena);
         <body>";
         foreach($tabla as $registro)
         {
-            echo "<tr>";
+            echo "<tr style='color:white'>";
             echo "<td> $registro->NOMBRE</td>";
             echo "<td> $registro->DIRECCION</td>";
             echo "<td> $registro->CORREO</td>";

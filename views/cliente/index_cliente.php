@@ -40,9 +40,14 @@
             </ul>
             <form class="d-flex">
 
+<<<<<<< HEAD
 
             <a class="nav-link active d-flex" aria-current="page" href="carrito/index.php">Productos</a>
             <a class="nav-link active d-flex" aria-current="page" href="carrito/ofertas.php">Ofertas</a>
+=======
+            <a class="nav-link active d-flex" aria-current="page" href="../../carrera/index.php">Productos</a>
+            <a class="nav-link active d-flex" aria-current="page" href="#">Ofertas</a>
+>>>>>>> d3c0f41b0724d4f9c598d9a83d30c65991227a71
 
         <?php
   session_start();

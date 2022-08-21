@@ -32,7 +32,7 @@
 <form action="GUARDINSCRIP.php" method="post" style="padding: 30px 10px;
 	background-color: #381b1ba6;
 	margin: calc(20% + 20px);
-	margin-top: 10px;
+	margin-top: 10px; 
 	padding-top: 18px;
 	margin-bottom: 10px">
 
@@ -44,13 +44,54 @@
 <p>Teléfono<input type="text" placeholder="Ingrese su teléfono" name="telefono"></p>
 
 <label>Dia De Registro<input type="datetime" name="fecha" value="" placeholder="<?= $fecha?>"></p>
+<br><label>Método de pago</label><br><br>
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
 
-<p>Metodo De Pago</p>
-  <select name="metodo">
-      <option value="1" name="Credito">Credito</option>
-      <option value="2" name="Debito">Debito</option>
-      <option value="3" name="Paypal">Paypal</option>
-  </select>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"MXN","value":1000}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
   
 
 <input type="submit" value="Registrarme Ahora">

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\administrador\css\bootstrap.min.css">
     <link rel="stylesheet" href="css/registro.css">
 
     <title>Document</title>
@@ -63,29 +64,14 @@ $reg = $query->seleccionar($cadena);
         <body>";
         foreach($tabla as $registro)
         {
-            echo "<tr style=' background: rgba(109, 107, 107, 0.544);
-            font-size: 22px;color:white'>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->NOMBRE</td>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->PRECIO_UNITARIO</td>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->DESCUENTO</td>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->EXISTENCIA</td>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->NOM_C</td>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->NOM_P</td>";
-            echo "<td style='   border: 0.5px solid rgb(255, 243, 243);
-            padding: 2px;color:white
-            font-size: 18px;'> $registro->DESCRIPCION</td>";
+            echo "<tr style='color:white'>";
+            echo "<td> $registro->NOMBRE</td>";
+            echo "<td> $registro->PRECIO_UNITARIO</td>";
+            echo "<td> $registro->DESCUENTO</td>";
+            echo "<td> $registro->EXISTENCIA</td>";
+            echo "<td> $registro->NOM_C</td>";
+            echo "<td> $registro->NOM_P</td>";
+            echo "<td> $registro->DESCRIPCION</td>";
 
 ?>
             <td><a href='editarpro.php?id=<?php echo $registro->CVE_P?>' class="btn btn-secondary">Modificar</a></td>

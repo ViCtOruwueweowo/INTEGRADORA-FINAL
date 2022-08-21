@@ -37,7 +37,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
           <div class="collapse navbar-collapse" id="navbarHeader">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a href="..\carrera\index.php" class="nav-link active">Bebidas</a>
+                    <a href="..\carrera\index.php" class="nav-link">Bebidas</a>
                 </li>
 
                 <li class="nav-item">
@@ -48,7 +48,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a href="ofertas.php" class="nav-link">ofertas </a>
+                    <a href="ofertas.php" class="nav-link active">ofertas </a>
                 </li>
                 </li>
                 <li class="nav-item">
@@ -69,11 +69,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach($resultado as $row ) {?>
 
         
-            <div class="col">
+            <div class="col-md-4">
               <div class="card shadow-sm">
                 <img src="">
                 <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column justify-content-between align-items-center">
                   <h5 class="card-title"><?php echo $row['NOMBRE']?></h5><BR></BR>
                   <p class="card-taitle">$ <?php echo number_format($row['PRECIO_UNITARIO'], 2, '.', ',');?></p><br>
                   <p class="card-taitle"> <?php echo $row['DESCRIPCION'];?></p><br>
