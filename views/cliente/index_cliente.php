@@ -40,8 +40,6 @@
             </ul>
             <form class="d-flex">
 
-            <a class="nav-link active d-flex" aria-current="page" href="#">Categorias</a>
-
             <a class="nav-link active d-flex" aria-current="page" href="../../carrera/index.php">Productos</a>
             <a class="nav-link active d-flex" aria-current="page" href="#">Ofertas</a>
 

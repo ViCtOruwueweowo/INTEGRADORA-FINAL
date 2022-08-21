@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Usaurio registrado</title>
 </head>
-<body>
+<body> 
     <div class="container"> 
         <?php
-        use MyApp\Query\ejecuta;
+        use MyApp\Query\Ejecuta;
         require("../vendor/autoload.php");
         extract($_POST);
-        extract($_POST);
-        $usfk='USER_FK';
-        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','$metodo','$fecha','$telefono','$usfk')";
-        $user->ejecutar($cadena);
+        $usuario = new Ejecuta();
+        
+        $usfk="SELECT ID_US FROM USUARIO WHERE USUARIO.CORREO='$user'";
+        
+        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','Tarjeta','$fecha','$telefono','$usfk')";
+
+        $usuario->ejecutar($cadena);
+
         echo "<div class='alert alert=success'>CLIENTE INSCRITO</div>";
-        header("refresh:40 loginapp.php");
+        header("refresh:1000 cliente/index_cliente.php");
         ?>
     </div>
 </body>
