@@ -5,24 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>Usaurio registrado</title>
+    <title>Usuario registrado</title>
 </head>
 <body> 
     <div class="container"> 
         <?php
-        use MyApp\Query\Ejecuta;
         require("../vendor/autoload.php");
-        extract($_POST);
+        use MyApp\Query\Ejecuta;
+        use MyApp\Query\Select;
         $usuario = new Ejecuta();
-        
-        $usfk="SELECT ID_US FROM USUARIO WHERE USUARIO.CORREO='$user'";
-        
-        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','Tarjeta','$fecha','$telefono','$usfk')";
+        $us = new Select();
+        error_reporting(E_ERROR | E_PARSE);
+        extract($_POST);
+         
+        $cad= "SELECT ID_US FROM usuario WHERE usuario.CORREO='$user'";
 
+        $reg = $us->seleccionar($cad);
+        foreach($reg as $value)
+        {
+        }
+        
+        $cadena="INSERT INTO inscrip_gym (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES ('$telefono','Tarjeta','$fecha','$value->ID_US')";
         $usuario->ejecutar($cadena);
 
-        echo "<div class='alert alert=success'>CLIENTE INSCRITO</div>";
-        header("refresh:1000 cliente/index_cliente.php");
+        echo "<div class='alert alert=success'>CLIENTE INSCRITO";
+        header("refresh:3 cliente/index_cliente.php");
         ?>
     </div>
 </body>

@@ -1,6 +1,6 @@
 <?php
-require '<config/config.php';
-require 'config/database.php';
+require '..\views\carrito\config\config.php';
+require '..\views\carrito\config\database.php';
 $db = new Database();
 $con = $db->conectar();
 
@@ -29,7 +29,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         <div class="container ">
           <a href="" class="navbar-brand d-flex align-items-center ">
             
-            <strong>The Box Club</strong>
+            <strong href="#">The Box Club</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
