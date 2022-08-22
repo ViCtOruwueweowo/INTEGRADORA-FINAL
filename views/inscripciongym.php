@@ -25,11 +25,7 @@
         </div>
 </nav>
       <!---->
-      <?php
-      date_default_timezone_set('America/Mexico_City');
-      $fecha=date("y-m-d");
-      ?>
-<form action="..\views\inscrp.php" method="post" style="padding: 30px 10px;
+<form action="inscrp.php" method="post" style="padding: 30px 10px;
 	background-color: #381b1ba6;
 	margin: calc(20% + 20px);
 	margin-top: 10px; 
@@ -44,9 +40,22 @@
   <input type="text" placeholder="Ingrese su correo" name="user">
   <br><br>
 
-<p>Teléfono<input type="text" placeholder="Ingrese su teléfono" name="telefono"></p><br>
+<p>Teléfono de emergencia<input type="text" placeholder="Ingrese su teléfono" name="telefono"></p><br>
 
-<label>Dia De Registro<input type="datetime" name="fecha" value="" placeholder="<?= $fecha?>"></p>
+<?php
+        date_default_timezone_set('America/Mexico_City');
+        $fecha_actual=date("Y-m-d");
+        date_default_timezone_set('America/Mexico_City');
+        //fecha actual del sistema
+        $fe=date("Y-m-d");
+
+        $mod_date = strtotime($fe."+ 0 days");
+        $fecha_maxima = date("Y-m-d",$mod_date);
+
+        ?>
+
+<label>Fecha <br><input type="date" name="fecha" min="<?php echo $fe ?>" max="<?php echo $fecha_maxima?>" required></label><br>
+
 <br><label>Método de pago</label><br><br>
 <div id="smart-button-container">
       <div style="text-align: center;">

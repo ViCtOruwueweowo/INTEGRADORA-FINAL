@@ -9,35 +9,33 @@
     <title>Document</title>
 </head>
 <body>
-   <form action="GUARDINSCRIP.php">
+   <form action="GUARDINSCRIP.php" method="post">
+        <?php
+        use MyApp\Query\select;
+        require("../vendor/autoload.php");
+        extract($_POST);
+        $query = new select();
+        $cadena= "SELECT ID_US, NOMBRES FROM USUARIO WHERE USUARIO.CORREO='$user'";
 
-<?php
-
-use MyApp\Query\select;
-require("../vendor/autoload.php");
-extract($_POST);
-
-$query = new select();
-
-$cadena= "SELECT ID_US, NOMBRES FROM USUARIO WHERE USUARIO.CORREO='$user'";
-
-$reg = $query->seleccionar($cadena);
-
-        echo "<div class='mb-3>'
+        $reg = $query->seleccionar($cadena);
+        echo "<h1>Confirma tu información antes de continuar</h1><br><br> <div class='mb-3>'
         <label class='control-label'>
         NOMBRE:
         </label>
-        <select name='nombre' class='form-select'>";
+        <label name='nombre' class=''>";
         foreach($reg as $value)
         {
             echo "<option value='".$value->ID_US."'>".$value->NOMBRES."</option>";
         }
         echo "</select>
         </div>";
-        ?>
-        <td><a href='GUARDINSCRIP.php?id=<?php echo $value->ID_US?>' class="btn btn-secondary">Confirmar</a></td>
+        echo "<br><h5>Tu teléfono de emergencia es: <br>$telefono</h5>";
+        echo "<br>";
+        echo "<h5>Y hoy es el día: <br>$fecha</h5>";
 
-        
+        ?>
+     
+        <input type="submit" value="Continuar">
     </form> 
 </body>
-</html>
+</html> 

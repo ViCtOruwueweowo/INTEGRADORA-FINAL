@@ -9,16 +9,16 @@
 </head>
 <body> 
     <div class="container"> 
+        
         <?php
+      
         require("../vendor/autoload.php");
         use MyApp\Query\Ejecuta;
         $usuario = new Ejecuta();
-
-        $us=$_GET['id'];
-        
+        error_reporting(E_ERROR | E_PARSE);
         extract($_POST);
          
-        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','Tarjeta','$fecha','$us')";
+        $cadena="INSERT INTO inscrip_gym (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES ('$telefono','Tarjeta','$fecha','$nombre')";
 
         $usuario->ejecutar($cadena);
 
