@@ -118,17 +118,18 @@
     <h5 style="font-family:century gothic;color: white;text-align:center">¡No Te Vayas Aqui Esta Tu Resultado!</h5>
     <?php
 
-	if($_POST)
-	{	
-		$num1 = $_POST
-		['Peso'];
-		$num2 = $_POST
-		['Altura'];
-		$suma = ($num1 
-		/ ($num2 * $num2));
-		echo "<div style=color:white>".$suma."<div>"; 
-	}
+if($_POST)
+{	
+  $num1 = $_POST
+  ['Peso'];
+  $num2 = $_POST
+  ['Altura'];
+  $suma = ($num1 
+  / ($num2 * $num2));
+  echo "<div style=color:white>".$suma."<div>"; 
+}
 ?>
+
     <br>
     <div class="container" style="background-color: transparent;border:transparent">
       <table >
@@ -182,7 +183,7 @@
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
 
-          <a href="views/ofertas.php">Ir a Ofertas</a>
+          <a href="../cliente/carrito/ofertas.php">Ir a Ofertas</a>
       </div>
           </div>
         </div></td>
@@ -209,7 +210,7 @@
       <h3 style="color: orange;">!!SOMOS GYM CLUB¡¡</h3>
       <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est aut distinctio rem dicta minima iste voluptas quia, sapiente consequuntur odio dolorum excepturi illum cumque.</P>
       <div class="link">
-          <a href="../nosotros.php">Ir a conocenos</a>
+          <a href="nosotros_cliente.php">Ir a conocenos</a>
       </div>
           </div>
           
