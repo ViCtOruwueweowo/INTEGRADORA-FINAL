@@ -15,7 +15,7 @@
 <body>
 <div style="width: 50%; margin:auto;">
 <?php
-use MyApp\Query\Select;
+use MyApp\Query\select;
 require("../../vendor/autoload.php");
 
 $editar=$_GET['id'];
