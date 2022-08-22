@@ -106,8 +106,6 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <a href="suplementos.php" class="nav-link ">Suplementos</a>
         </li>
     </ul>
-    <a href="checkout.php" class="btn btn-primary">
-        Carrito <span id="num_cart" class="badge bg-success"><?php echo $num_cart; ?></span> </a>
 </div>
     </div>
   </div>
@@ -138,10 +136,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 <?php echo $descripcion; ?>
       </p>
       <div class="d-grid gap-3 col-10 mx-auto">
-<a href="checkout.php"  class="btn btn-success"><button class="btn btn-success" type="button">Comprar Ahora</button></a>
-<button class="btn btn-outline-success" type="button" 
-onclick="addProducto(<?php echo 
-$id; ?>, '<?php echo $token_tmp; ?>')">Agregar Al Carrito</button>   
+<a href="checkout_.php"  class="btn btn-success"><button class="btn btn-success" type="button">Comprar Ahora</button></a>
       </div>
         </div>
     </div>
