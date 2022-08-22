@@ -58,6 +58,7 @@ $reg = $query->seleccionar($cadena);
         <th>Telefono</th>
         <th>Correo</th>
         <th>Modificar</th>
+
         </tr>
         </thead>
         <body>";
