@@ -53,8 +53,6 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <a href="suplementos.php" class="nav-link active">Suplementos</a>
         </li>
     </ul>
-    <a href="checkout.php" class="btn btn-primary">
-        Carrito <span id="num_cart" class="badge bg-success"><?php echo $num_cart; ?></span> </a></div>
     </div>
   </div>
 </header>
@@ -85,9 +83,9 @@ if(!file_exists($imagen)){
              btn-info">Detalles</a>
             
                 </div>
-                <button class="btn btn-outline-success" type="button" 
-onclick="addProducto(<?php echo 
-$id; ?>, '<?php echo $token_tmp; ?>')">Agregar Al Carrito</button>               </div>
+                <a href="checkout_.php"><button class="btn btn-outline-success" type="button" 
+>Comprar Ahora</button>  </a>
+             </div>
               </div>
           </div>
         </div>
