@@ -29,7 +29,7 @@
       date_default_timezone_set('America/Mexico_City');
       $fecha=date("y-m-d");
       ?>
-<form action="GUARDINSCRIP.php" method="post" style="padding: 30px 10px;
+<form action="..\views\inscrp.php" method="post" style="padding: 30px 10px;
 	background-color: #381b1ba6;
 	margin: calc(20% + 20px);
 	margin-top: 10px; 
@@ -39,9 +39,12 @@
 <h1 class="animate__animated animate__backInLeft">¡¡Inscríbete a nuestro gimnasio ahora!!</h1>
 <h5 class="animate__animated animate__backInLeft">Comencemos este viaje juntos</h5>
 
-<p>Correo electrónico <input type="text" placeholder="Ingrese su correo" name="user"></p>
 
-<p>Teléfono<input type="text" placeholder="Ingrese su teléfono" name="telefono"></p>
+<p>Correo electrónico </p>
+  <input type="text" placeholder="Ingrese su correo" name="user">
+  <br><br>
+
+<p>Teléfono<input type="text" placeholder="Ingrese su teléfono" name="telefono"></p><br>
 
 <label>Dia De Registro<input type="datetime" name="fecha" value="" placeholder="<?= $fecha?>"></p>
 <br><label>Método de pago</label><br><br>
