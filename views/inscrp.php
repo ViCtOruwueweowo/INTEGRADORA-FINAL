@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 </head>
 <body>
@@ -33,7 +35,9 @@ $reg = $query->seleccionar($cadena);
         echo "</select>
         </div>";
         ?>
-        <td><a href='GUARDINSCRIP.php' class="btn btn-secondary">Confirmar</a></td>
+        <td><a href='GUARDINSCRIP.php?id=<?php echo $value->ID_US?>' class="btn btn-secondary">Confirmar</a></td>
+
+        
     </form> 
 </body>
 </html>

@@ -13,10 +13,12 @@
         require("../vendor/autoload.php");
         use MyApp\Query\Ejecuta;
         $usuario = new Ejecuta();
+
+        $us=$_GET['id'];
         
         extract($_POST);
          
-        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','Tarjeta','$fecha','$nombre')";
+        $cadena="INSERT INTO INSCRIP_GYM (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES('$telefono','Tarjeta','$fecha','$us')";
 
         $usuario->ejecutar($cadena);
 
