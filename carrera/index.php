@@ -1,6 +1,6 @@
 <?php
-require 'config/config.php';
-require 'config/database.php';
+require '..\views\carrito\config\config.php';
+require '..\views\carrito\config\database.php';
 $db = new Database();
 $con = $db->conectar();
 
