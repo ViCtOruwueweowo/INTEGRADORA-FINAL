@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="..\empleado\css\bootstrap.min.css">
+    <link rel="stylesheet" href="css/registro.css">
     <title>Orden de compra empleado</title>
 </head>
 <body>
 <div class="container">
     <form action="guardarDOC.php" method="post">
-        <h2 class="titulo">HACER COMPRA COMO EMPLEADO</h2>
+        <h2 class="titulo">HACER COMPRA</h2>
   
         <div class="padre">
             <div class="1">
@@ -60,11 +61,11 @@ $reg = $query->seleccionar($cadena);
             
             <br>
             <div class="3">
-                <label for="">AQUI VA CANTIDAD</label>
+                <label for="">CANTIDAD:</label>
                 <input type="text" name="CANTIDAD">
             </div> <br>
             <div class="4">
-                <label for="">AQUI VA P_PROV SOLO MUESTRA</label>
+                <label for="">PRECIO PROVEEDOR:</label>
                 <input type="text" name="PROV">
             </div> <br>
 
