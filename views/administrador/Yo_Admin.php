@@ -50,7 +50,7 @@
 </div>
 
 <?php
-use MyApp\Query\Select;
+use MyApp\Query\select;
 require("../../vendor/autoload.php");
 
 $edit=$_GET['id'];

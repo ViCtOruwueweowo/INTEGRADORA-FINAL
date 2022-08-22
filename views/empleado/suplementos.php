@@ -39,7 +39,7 @@
         <form action="" method="post">
 
 <?php
-use MyApp\Query\Select;
+use MyApp\Query\select;
 require("../../vendor/autoload.php");
 
 $query = new Select();

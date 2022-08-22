@@ -10,7 +10,7 @@
     <body>
         <div class="container">
             <?php
-                use MyApp\Query\Select; 
+                use MyApp\Query\select; 
                 require("../../vendor/autoload.php");
 
                 $insert = new Select();
