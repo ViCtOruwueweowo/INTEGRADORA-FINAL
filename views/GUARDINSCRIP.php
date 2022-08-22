@@ -27,9 +27,17 @@
         
         $cadena="INSERT INTO inscrip_gym (TEL_EMERGENCIA, T_PAGO, FECHA_INSCRIP, USER_FK) VALUES ('$telefono','Tarjeta','$fecha','$value->ID_US')";
         $usuario->ejecutar($cadena);
-
-        echo "<div class='alert alert=success'>CLIENTE INSCRITO";
+if($value->ID_US==0)
+{
+    echo "<div class='alert alert=danger'>Error, ese cliente no ha sido registrado";
+    header("refresh:3 cliente/index_cliente.php");
+}
+else
+{
+            echo "<div class='alert alert=success'>CLIENTE INSCRITO";
         header("refresh:3 cliente/index_cliente.php");
+}
+
         ?>
     </div>
 </body>
